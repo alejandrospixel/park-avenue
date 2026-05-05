@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Park Avenue — Kitchen Manager</title>
+    <style>
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --border: #3a3a3a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --accent-primary: #3b82f6;
+            --accent-success: #10b981;
+            --accent-warning: #f59e0b;
+            --accent-danger: #ef4444;
+            --accent-info: #06b6d4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            border: 1px solid var(--border);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 15px;
+            color: var(--accent-success);
+        }
+
+        .modal-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .modal-content input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .modal-buttons .confirm-btn {
+            background: var(--accent-success);
+            color: var(--bg-primary);
+        }
+
+        .modal-buttons .confirm-btn:hover {
+            opacity: 0.9;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0d7377, #1a1a1a);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-success);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .sync-status {
+            font-size: 12px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .sync-status.connected {
+            color: var(--accent-success);
+        }
+
+        .sync-status.disconnected {
+            color: var(--accent-warning);
+        }
+
+        .tabs {
+            display: flex;
+            background: var(--bg-secondary);
+            border-bottom: 2px solid var(--border);
+            padding: 0 20px;
+            gap: 5px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab-button {
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .tab-button.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-success);
+        }
+
+        .tab-button:hover {
+            color: var(--text-primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-success);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .search-section {
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .filter-button {
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 12px;
+        }
+
+        .filter-button.active {
+            background: var(--accent-success);
+            color: var(--bg-primary);
+            border-color: var(--accent-success);
+        }
+
+        .filter-button:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .item-grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .item:hover {
+            border-color: var(--accent-primary);
+            background: var(--bg-tertiary);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            align-items: start;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .item-brand {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .item-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .item-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .item-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-info);
+            color: var(--bg-primary);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .tag.low-stock {
+            background: var(--accent-warning);
+        }
+
+        .tag.expiring {
+            background: var(--accent-danger);
+        }
+
+        .shopping-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shopping-item-info {
+            flex: 1;
+        }
+
+        .shopping-item-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .shopping-item-price {
+            font-size: 12px;
+            color: var(--accent-success);
+            font-weight: bold;
+        }
+
+        .shopping-item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .action-btn.buy {
+            background: var(--accent-success);
+            color: var(--bg-primary);
+        }
+
+        .action-btn.buy.active {
+            opacity: 0.8;
+        }
+
+        .action-btn.skip {
+            background: var(--text-secondary);
+            color: var(--bg-primary);
+        }
+
+        .action-btn.skip.active {
+            opacity: 0.8;
+        }
+
+        .action-btn.avoid {
+            background: var(--accent-danger);
+            color: white;
+        }
+
+        .action-btn.avoid.active {
+            opacity: 0.8;
+        }
+
+        .cart-summary {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent-success);
+        }
+
+        .complete-trip-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--accent-success), #059669);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 15px;
+        }
+
+        .complete-trip-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .complete-trip-btn:active {
+            transform: translateY(0);
+        }
+
+        .complete-trip-btn.syncing {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-success);
+            color: var(--bg-primary);
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            z-index: 9998;
+            animation: slideIn 0.3s ease;
+        }
+
+        .toast.error {
+            background: var(--accent-danger);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .insights-section {
+            margin-bottom: 25px;
+        }
+
+        .insights-section h3 {
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .insight-list {
+            list-style: none;
+        }
+
+        .insight-list li {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent-success);
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .insight-list li.warning {
+            border-left-color: var(--accent-warning);
+        }
+
+        .insight-list li.danger {
+            border-left-color: var(--accent-danger);
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .sync-status {
+                font-size: 11px;
+            }
+
+            .shopping-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .shopping-item-actions {
+                width: 100%;
+                margin-top: 10px;
+                justify-content: flex-start;
+            }
+
+            .action-btn {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <h2>🔐 Connect to GitHub</h2>
+            <p>Paste your GitHub Personal Access Token to enable automatic syncing of your kitchen inventory.</p>
+            <input
+                type="password"
+                id="tokenInput"
+                placeholder="github_pat_..."
+                autocomplete="off"
+            >
+            <p style="font-size: 12px; color: #888;">Your token is stored locally and never sent to external servers.</p>
+            <div class="modal-buttons">
+                <button class="confirm-btn" onclick="saveToken()">Connect</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>🏢 The Park Avenue</h1>
+                <p>Unified inventory & shopping management using PersonalOS — real-time sync across all devices</p>
+            </div>
+            <div class="sync-status" id="syncStatus">Initializing...</div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('inventory')">📦 Inventory</button>
+            <button class="tab-button" onclick="switchTab('shopping')">🛒 Shopping</button>
+            <button class="tab-button" onclick="switchTab('insights')">📊 Insights</button>
+        </div>
+
+        <!-- INVENTORY TAB -->
+        <div id="inventory" class="tab-content active">
+            <div class="stats-row" id="inventoryStats"></div>
+
+            <div class="search-section">
+                <input
+                    type="text"
+                    class="search-input"
+                    id="searchInput"
+                    placeholder="Search items..."
+                    onkeyup="filterInventory()"
+                >
+                <div class="filter-buttons" id="categoryFilters"></div>
+            </div>
+
+            <div class="item-grid" id="inventoryGrid"></div>
+        </div>
+
+        <!-- SHOPPING TAB -->
+        <div id="shopping" class="tab-content">
+            <div class="cart-summary">
+                <div>Items Selected: <strong id="cartCount">0</strong></div>
+                <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+            </div>
+
+            <button class="complete-trip-btn" id="completeTripBtn" onclick="completeTrip()">
+                🏁 Complete Trip & Sync
+            </button>
+
+            <div class="item-grid" id="shoppingGrid"></div>
+        </div>
+
+        <!-- INSIGHTS TAB -->
+        <div id="insights" class="tab-content">
+            <div class="insights-section">
+                <h3>Kitchen Health Score</h3>
+                <div class="stat-box">
+                    <div class="stat-number" id="healthScore">—</div>
+                    <div class="stat-label">Overall Kitchen Rating</div>
+                </div>
+            </div>
+
+            <div class="insights-section">
+                <h3>⚠️ Low Stock Items</h3>
+                <ul class="insight-list" id="lowStockList"></ul>
+            </div>
+
+            <div class="insights-section">
+                <h3>⏰ Expiring Soon (7 days)</h3>
+                <ul class="insight-list" id="expiringList"></ul>
+            </div>
+
+            <div class="insights-section">
+                <h3>🎯 Area Impact Tags</h3>
+                <ul class="insight-list" id="areaImpactList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const GITHUB_OWNER = 'alejandrospixel';
+        const GITHUB_REPO = 'park-avenue';
+        const GITHUB_FILE = 'kitchen_inventory.json';
+
+        let githubToken = null;
+        let inventory = null;
+        let shoppingRecommendations = [];
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', async () => {
+            githubToken = localStorage.getItem('github_token');
+            if (!githubToken) {
+                document.getElementById('authModal').classList.add('show');
+            } else {
+                await initializeApp();
+            }
+        });
+
+        function saveToken() {
+            const token = document.getElementById('tokenInput').value.trim();
+            if (!token) {
+                showToast('Please enter a token', 'error');
+                return;
+            }
+            localStorage.setItem('github_token', token);
+            githubToken = token;
+            document.getElementById('authModal').classList.remove('show');
+            initializeApp();
+        }
+
+        async function initializeApp() {
+            updateSyncStatus('Connecting...');
+            try {
+                // Load inventory from GitHub
+                const data = await fetchFromGitHub(GITHUB_FILE);
+                inventory = JSON.parse(data);
+
+                // Load shopping recommendations (embedded for now, can be external later)
+                loadShoppingRecommendations();
+
+                renderInventory();
+                renderShopping();
+                renderInsights();
+                updateSyncStatus('Connected', true);
+            } catch (error) {
+                console.error('Init error:', error);
+                updateSyncStatus('Connection failed', false);
+                showToast('Failed to load data. Check your token.', 'error');
+            }
+        }
+
+        async function fetchFromGitHub(filename) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filename}`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${githubToken}`,
+                    'Accept': 'application/vnd.github.v3.raw'
+                }
+            });
+            if (!response.ok) throw new Error(`GitHub error: ${response.status}`);
+            return await response.text();
+        }
+
+        async function pushToGitHub(filename, content, message) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filename}`;
+
+            try {
+                // Get current file SHA
+                const getResponse = await fetch(url, {
+                    headers: {
+                        'Authorization': `token ${githubToken}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                let sha = null;
+                if (getResponse.ok) {
+                    const data = await getResponse.json();
+                    sha = data.sha;
+                }
+
+                // Update file
+                const pushResponse = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        content: btoa(content),
+                        sha: sha
+                    })
+                });
+
+                if (!pushResponse.ok) {
+                    throw new Error(`Push failed: ${pushResponse.status}`);
+                }
+                return true;
+            } catch (error) {
+                console.error('Push error:', error);
+                throw error;
+            }
+        }
+
+        function loadShoppingRecommendations() {
+            shoppingRecommendations = [
+                { name: 'Organic Blueberries (Frozen)', category: 'produce', price: 12.99, impacts: ['Antioxidant-rich', 'VO2 support'] },
+                { name: 'Organic Spinach (Frozen)', category: 'produce', price: 8.99, impacts: ['Iron-rich', 'Anti-inflammatory'] },
+                { name: 'Organic Salmon Fillets', category: 'proteins', price: 24.99, impacts: ['High protein', 'Omega-3s'] },
+                { name: 'Organic Almonds (Raw)', category: 'snacks', price: 13.99, impacts: ['Heart-healthy', 'HDL-elevating'] },
+                { name: 'Grass-Fed Ground Beef', category: 'proteins', price: 18.99, impacts: ['High protein', 'Iron-rich'] },
+                { name: 'Organic Kale', category: 'produce', price: 6.99, impacts: ['Micronutrient-dense', 'Anti-inflammatory'] },
+                { name: 'Organic Sweet Potato', category: 'produce', price: 7.99, impacts: ['Pre-run fuel', 'Carb-efficient'] },
+                { name: 'Organic Almond Butter', category: 'snacks', price: 11.99, impacts: ['High protein', 'Heart-healthy'] },
+                { name: 'Wild-Caught Sardines', category: 'proteins', price: 8.99, impacts: ['High protein', 'Omega-3s'] },
+                { name: 'Organic Beet Root Powder', category: 'supplements', price: 19.99, impacts: ['VO2 support', 'Antioxidant-rich'] }
+            ];
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function renderInventory() {
+            const stats = {
+                total: 0,
+                lowStock: 0,
+                expiring: 0
+            };
+
+            let html = '';
+            const now = new Date();
+            const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+            for (const [category, data] of Object.entries(inventory.categories)) {
+                for (const item of data.items) {
+                    stats.total++;
+                    if (item.is_low) stats.lowStock++;
+
+                    const expDate = new Date(item.expiration_date);
+                    if (expDate <= sevenDaysFromNow) stats.expiring++;
+
+                    const tags = (item.area_impacts || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+                    const lowStockTag = item.is_low ? '<span class="tag low-stock">Low</span>' : '';
+                    const expiringTag = expDate <= sevenDaysFromNow ? '<span class="tag expiring">Expiring</span>' : '';
+
+                    html += `
+                        <div class="item">
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-name">${item.name}</div>
+                                    <div class="item-brand">${item.brand}</div>
+                                </div>
+                            </div>
+                            <div class="item-meta">
+                                <div class="item-meta-item">📦 ${item.quantity} ${item.unit}</div>
+                                <div class="item-meta-item">📍 ${item.storage_location}</div>
+                                <div class="item-meta-item">📅 ${item.expiration_date}</div>
+                            </div>
+                            <div class="item-tags">
+                                ${tags}
+                                ${lowStockTag}
+                                ${expiringTag}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            document.getElementById('inventoryStats').innerHTML = `
+                <div class="stat-box">
+                    <div class="stat-number">${stats.total}</div>
+                    <div class="stat-label">Total Items</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">${stats.lowStock}</div>
+                    <div class="stat-label">Low Stock</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">${stats.expiring}</div>
+                    <div class="stat-label">Expiring Soon</div>
+                </div>
+            `;
+
+            document.getElementById('inventoryGrid').innerHTML = html;
+        }
+
+        function renderShopping() {
+            let html = '';
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            const skipped = JSON.parse(localStorage.getItem('shop_skipped') || '[]');
+            const avoided = JSON.parse(localStorage.getItem('shop_avoided') || '[]');
+
+            shoppingRecommendations.forEach((item, idx) => {
+                const isBought = bought.includes(idx);
+                const isSkipped = skipped.includes(idx);
+                const isAvoided = avoided.includes(idx);
+
+                html += `
+                    <div class="shopping-item">
+                        <div class="shopping-item-info">
+                            <div class="shopping-item-name">${item.name}</div>
+                            <div class="shopping-item-price">$${item.price.toFixed(2)}</div>
+                        </div>
+                        <div class="shopping-item-actions">
+                            <button class="action-btn buy ${isBought ? 'active' : ''}" onclick="toggleBought(${idx})">✓ Buy</button>
+                            <button class="action-btn skip ${isSkipped ? 'active' : ''}" onclick="toggleSkipped(${idx})">✕ Skip</button>
+                            <button class="action-btn avoid ${isAvoided ? 'active' : ''}" onclick="toggleAvoided(${idx})">⛔ Avoid</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('shoppingGrid').innerHTML = html;
+            updateCartTotal();
+        }
+
+        function toggleBought(idx) {
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            const skipped = JSON.parse(localStorage.getItem('shop_skipped') || '[]');
+            const avoided = JSON.parse(localStorage.getItem('shop_avoided') || '[]');
+
+            if (bought.includes(idx)) {
+                bought.splice(bought.indexOf(idx), 1);
+            } else {
+                bought.push(idx);
+                skipped.splice(skipped.indexOf(idx), 1);
+                avoided.splice(avoided.indexOf(idx), 1);
+            }
+
+            localStorage.setItem('shop_bought', JSON.stringify(bought));
+            localStorage.setItem('shop_skipped', JSON.stringify(skipped));
+            localStorage.setItem('shop_avoided', JSON.stringify(avoided));
+            renderShopping();
+        }
+
+        function toggleSkipped(idx) {
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            const skipped = JSON.parse(localStorage.getItem('shop_skipped') || '[]');
+            const avoided = JSON.parse(localStorage.getItem('shop_avoided') || '[]');
+
+            if (skipped.includes(idx)) {
+                skipped.splice(skipped.indexOf(idx), 1);
+            } else {
+                skipped.push(idx);
+                bought.splice(bought.indexOf(idx), 1);
+                avoided.splice(avoided.indexOf(idx), 1);
+            }
+
+            localStorage.setItem('shop_bought', JSON.stringify(bought));
+            localStorage.setItem('shop_skipped', JSON.stringify(skipped));
+            localStorage.setItem('shop_avoided', JSON.stringify(avoided));
+            renderShopping();
+        }
+
+        function toggleAvoided(idx) {
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            const skipped = JSON.parse(localStorage.getItem('shop_skipped') || '[]');
+            const avoided = JSON.parse(localStorage.getItem('shop_avoided') || '[]');
+
+            if (avoided.includes(idx)) {
+                avoided.splice(avoided.indexOf(idx), 1);
+            } else {
+                avoided.push(idx);
+                bought.splice(bought.indexOf(idx), 1);
+                skipped.splice(skipped.indexOf(idx), 1);
+            }
+
+            localStorage.setItem('shop_bought', JSON.stringify(bought));
+            localStorage.setItem('shop_skipped', JSON.stringify(skipped));
+            localStorage.setItem('shop_avoided', JSON.stringify(avoided));
+            renderShopping();
+        }
+
+        function updateCartTotal() {
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            const total = bought.reduce((sum, idx) => sum + shoppingRecommendations[idx].price, 0);
+            document.getElementById('cartCount').textContent = bought.length;
+            document.getElementById('cartTotal').textContent = total.toFixed(2);
+        }
+
+        function renderInsights() {
+            const now = new Date();
+            const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+            let lowStockHtml = '';
+            let expiringHtml = '';
+            let areaImpactMap = {};
+
+            for (const [category, data] of Object.entries(inventory.categories)) {
+                for (const item of data.items) {
+                    if (item.is_low) {
+                        lowStockHtml += `<li>${item.name} - Only ${item.quantity} ${item.unit} left</li>`;
+                    }
+
+                    const expDate = new Date(item.expiration_date);
+                    if (expDate <= sevenDaysFromNow && expDate > now) {
+                        expiringHtml += `<li class="warning">${item.name} - Expires ${item.expiration_date}</li>`;
+                    }
+
+                    (item.area_impacts || []).forEach(impact => {
+                        areaImpactMap[impact] = (areaImpactMap[impact] || 0) + 1;
+                    });
+                }
+            }
+
+            let areaImpactHtml = Object.entries(areaImpactMap)
+                .sort(([,a], [,b]) => b - a)
+                .map(([impact, count]) => `<li>${impact} <strong>(${count} items)</strong></li>`)
+                .join('');
+
+            document.getElementById('lowStockList').innerHTML = lowStockHtml || '<li>All items well-stocked!</li>';
+            document.getElementById('expiringList').innerHTML = expiringHtml || '<li>No items expiring soon</li>';
+            document.getElementById('areaImpactList').innerHTML = areaImpactHtml;
+
+            // Health score
+            const totalItems = Object.values(inventory.categories).reduce((sum, cat) => sum + cat.items.length, 0);
+            const lowStockCount = Object.values(inventory.categories)
+                .reduce((sum, cat) => sum + cat.items.filter(i => i.is_low).length, 0);
+            const score = Math.max(50, 100 - (lowStockCount * 10));
+            document.getElementById('healthScore').textContent = score;
+        }
+
+        async function completeTrip() {
+            const btn = document.getElementById('completeTripBtn');
+            btn.classList.add('syncing');
+            btn.disabled = true;
+
+            try {
+                const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+                const avoided = JSON.parse(localStorage.getItem('shop_avoided') || '[]');
+
+                const boughtItems = bought.map(idx => shoppingRecommendations[idx]);
+                const avoidedItems = avoided.map(idx => shoppingRecommendations[idx]);
+
+                const total = boughtItems.reduce((sum, item) => sum + item.price, 0);
+                const timestamp = new Date().toLocaleString();
+
+                const summary = `🏁 COSTCO TRIP COMPLETED\n\n📅 ${timestamp}\n\n✅ PURCHASED:\n${boughtItems.map(i => `• ${i.name} - $${i.price.toFixed(2)}`).join('\n')}\n\n⛔ AVOID FUTURE:\n${avoidedItems.map(i => `• ${i.name}`).join('\n') || 'None'}\n\n💰 TRIP TOTAL: $${total.toFixed(2)}`;
+
+                // Push to GitHub
+                await pushToGitHub(
+                    'trip_log.txt',
+                    summary,
+                    `Trip: ${new Date().toISOString()}`
+                );
+
+                // Clear shopping selections
+                localStorage.removeItem('shop_bought');
+                localStorage.removeItem('shop_skipped');
+                localStorage.removeItem('shop_avoided');
+
+                showToast('✓ Trip synced to GitHub!');
+                renderShopping();
+            } catch (error) {
+                console.error('Sync error:', error);
+                showToast('Sync failed: ' + error.message, 'error');
+            } finally {
+                btn.classList.remove('syncing');
+                btn.disabled = false;
+            }
+        }
+
+        function updateSyncStatus(text, connected = null) {
+            const status = document.getElementById('syncStatus');
+            status.textContent = text;
+            if (connected !== null) {
+                status.classList.remove('connected', 'disconnected');
+                status.classList.add(connected ? 'connected' : 'disconnected');
+            }
+        }
+
+        function filterInventory() {
+            // TODO: Add search/filter logic
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type === 'error' ? 'error' : ''}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
