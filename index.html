@@ -505,6 +505,127 @@
             padding: 12px;
             margin-bottom: 8px;
             border-radius: 4px;
+
+        .category-card {
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent-warning);
+            background: rgba(13, 115, 119, 0.2);
+        }
+
+        .category-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 15px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--accent-success);
+        }
+
+        .category-card-chevron {
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .category-card-chevron.open {
+            transform: rotate(180deg);
+        }
+
+        .category-card-content {
+            display: none;
+            padding: 15px;
+            border-top: 1px solid var(--border);
+            background: rgba(0,0,0,0.3);
+            font-size: 12px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .category-card-content.open {
+            display: block;
+        }
+
+        .category-card-content div {
+            margin-bottom: 8px;
+        }
+
+        .spotlight-tile {
+            background: var(--bg-tertiary);
+            border-left: 4px solid var(--accent-warning);
+            border-radius: 6px;
+            padding: 15px;
+            transition: all 0.2s;
+        }
+
+        .spotlight-tile:hover {
+            background: rgba(13, 115, 119, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .spotlight-tile-name {
+            font-weight: 600;
+            color: var(--accent-warning);
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .spotlight-tile-callout {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .spotlight-tile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .spotlight-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 10px;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .macro-badge {
+            text-align: center;
+            padding: 12px 15px;
+            background: rgba(13, 115, 119, 0.3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        .macro-badge-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .macro-badge-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--accent-warning);
+            margin: 6px 0;
+        }
+
+        .macro-badge-percent {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
             font-size: 14px;
         }
 
@@ -615,18 +736,15 @@
 
         <!-- INSIGHTS TAB -->
         <div id="insights" class="tab-content">
-            <div class="insights-section">
-                <h3>🏆 Overall Kitchen Rating</h3>
-                <div class="stat-box">
-                    <div class="stat-number" id="healthScore">—</div>
-                    <div class="stat-label" id="healthScoreLabel">Calculating...</div>
+            <div id="topDashboard" style="background: linear-gradient(135deg, #0d7377, #1a1a1a); padding: 20px; border-radius: 8px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div style="flex: 1; min-width: 150px;">
+                    <div style="font-size: 12px; color: #a0a0a0; text-transform: uppercase; letter-spacing: 1px;">Kitchen Rating</div>
+                    <div style="font-size: 48px; font-weight: bold; color: #10b981;">
+                        <span id="healthScore">—</span>
+                    </div>
+                    <div style="font-size: 13px; color: #f59e0b;" id="healthScoreLabel">—</div>
                 </div>
-            </div>
-
-            <div class="insights-section">
-                <h3>📊 Macro Distribution</h3>
-                <canvas id="macroChart" width="400" height="200"></canvas>
-                <div id="macroStats"></div>
+                <div id="macroStatsHeader" style="display: flex; gap: 15px; flex: 2; min-width: 250px;"></div>
             </div>
 
             <div class="insights-section">
@@ -636,12 +754,7 @@
 
             <div class="insights-section">
                 <h3>⭐ Your Kitchen MVP: Top 10 Items</h3>
-                <div id="itemSpotlights"></div>
-            </div>
-
-            <div class="insights-section">
-                <h3>⏰ Expiring Soon (7 days)</h3>
-                <ul class="insight-list" id="expiringList"></ul>
+                <div id="itemSpotlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;"></div>
             </div>
         </div>
     </div>
@@ -938,19 +1051,16 @@
         }
 
         function renderInsights() {
-            const now = new Date();
-            const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-
             // Daily targets
             const dailyTargets = {
-                carbs: 350,    // mid-range for running load
+                carbs: 350,
                 protein: 120,
                 fat: 70,
-                saturatedFat: 18,  // lipid intervention target
+                saturatedFat: 18,
                 fiber: 30
             };
 
-            // Collect all items with metadata
+            // Collect all items and calculate nutrition
             const allItems = [];
             const categoryNutrients = {};
 
@@ -967,7 +1077,6 @@
 
                 for (const item of catData.items) {
                     allItems.push({ ...item, category: catKey });
-
                     const nutrition = item.nutrition || {};
                     categoryNutrients[catKey].carbs += nutrition.carbs_g || 0;
                     categoryNutrients[catKey].protein += nutrition.protein_g || 0;
@@ -988,26 +1097,53 @@
                 totalFiber += cat.fiber;
             }
 
-            // Render macro distribution
-            const macroTotal = totalCarbs + totalProtein + (totalFat * 9) / 4; // rough caloric equivalents
-            const macroData = {
-                carbs: totalCarbs,
-                protein: totalProtein,
-                fat: totalFat
-            };
-            renderMacroChart(macroData);
+            // Top dashboard: rating + macros
+            const score = 85 + Math.min(15, Math.round(totalFiber / 5));
+            const foodScore = score > 95 ? 'Elite Athlete Kitchen 🏆' :
+                             score > 85 ? 'Recovery-Optimized 🎯' :
+                             'Solid Foundation 💪';
 
-            // Render category nutrients with daily value context
+            const total = totalCarbs + totalProtein + totalFat;
+            const carbPercent = ((totalCarbs / total) * 100).toFixed(0);
+            const proteinPercent = ((totalProtein / total) * 100).toFixed(0);
+            const fatPercent = ((totalFat / total) * 100).toFixed(0);
+
+            document.getElementById('healthScore').textContent = score;
+            document.getElementById('healthScoreLabel').textContent = foodScore;
+
+            document.getElementById('macroStatsHeader').innerHTML = `
+                <div class="macro-badge">
+                    <div class="macro-badge-label">🥗 Carbs</div>
+                    <div class="macro-badge-value">${totalCarbs.toFixed(0)}g</div>
+                    <div class="macro-badge-percent">${carbPercent}% of total</div>
+                </div>
+                <div class="macro-badge">
+                    <div class="macro-badge-label">💪 Protein</div>
+                    <div class="macro-badge-value">${totalProtein.toFixed(0)}g</div>
+                    <div class="macro-badge-percent">${proteinPercent}% of total</div>
+                </div>
+                <div class="macro-badge">
+                    <div class="macro-badge-label">🥜 Fat</div>
+                    <div class="macro-badge-value">${totalFat.toFixed(0)}g</div>
+                    <div class="macro-badge-percent">${fatPercent}% of total</div>
+                </div>
+            `;
+
+            // Collapsible category cards
             let categoryHtml = '';
             for (const [catKey, nutrients] of Object.entries(categoryNutrients)) {
                 const carbsPercent = Math.round((nutrients.carbs / dailyTargets.carbs) * 100);
                 const proteinPercent = Math.round((nutrients.protein / dailyTargets.protein) * 100);
                 const fiberPercent = Math.round((nutrients.fiber / dailyTargets.fiber) * 100);
+                const heroNutrient = nutrients.protein > nutrients.carbs ? `${nutrients.protein.toFixed(0)}g protein` : `${nutrients.carbs.toFixed(0)}g carbs`;
 
                 categoryHtml += `
-                    <div style="margin-bottom: 20px; padding: 15px; background: var(--bg-tertiary); border-radius: 6px;">
-                        <h4 style="margin-bottom: 10px; color: var(--accent-success);">${nutrients.name}</h4>
-                        <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.8;">
+                    <div class="category-card" onclick="toggleCategoryCard(this)">
+                        <div class="category-card-header">
+                            <div>${nutrients.name} — ${heroNutrient}</div>
+                            <div class="category-card-chevron">▾</div>
+                        </div>
+                        <div class="category-card-content">
                             <div>🥗 Carbs: <strong>${nutrients.carbs.toFixed(0)}g</strong> (${carbsPercent}% of ${dailyTargets.carbs}g daily)</div>
                             <div>💪 Protein: <strong>${nutrients.protein.toFixed(0)}g</strong> (${proteinPercent}% of ${dailyTargets.protein}g daily)</div>
                             <div>🥜 Fat: <strong>${nutrients.fat.toFixed(0)}g</strong> | Sat Fat: <strong>${nutrients.saturatedFat.toFixed(0)}g</strong></div>
@@ -1018,7 +1154,7 @@
             }
             document.getElementById('categoryNutrients').innerHTML = categoryHtml;
 
-            // Select top 10 items for spotlights (by impact score)
+            // Top 10 spotlights as tiles
             const spotlightItems = allItems
                 .map(item => ({
                     ...item,
@@ -1027,91 +1163,40 @@
                 .sort((a, b) => b.impactScore - a.impactScore)
                 .slice(0, 10);
 
-            // Render item spotlights with warm tone
-            let spotlightHtml = '';
             const spotlights = {
-                'Organic Greek Yogurt': 'Post-run powerhouse: 20g protein per serving + live probiotics for gut health. Recovery fuel that actually tastes incredible.',
-                'Organic Chia Seeds': '10g fiber + omega-3s per serving. Nearly 40% of your daily fiber in a sprinkle—anti-inflammatory gold when you\'re crushing 15+ miles a week.',
-                'Blueberries': 'Nature\'s antioxidant treasure. Anthocyanins + anthocyanins + LDL-fighting power. Your VO2 system will thank you.',
-                'Walnut Halves': 'HDL-elevating heart heroes. 9g fat per ounce, but 8.7g is the unsaturated kind that your lipid panel loves.',
-                'Sweet Potatoes': 'Pre-run carb fuel perfection. 20g carbs per 100g + fiber to keep energy steady during long runs. Roast them, crush your workout.',
-                'Organic Boneless Skinless Chicken Breasts': 'Lean recovery legend. 31g protein per 100g, only 1g sat fat. The cleanup hitter in your post-run playbook.',
-                'Blackberries': 'Fiber bomb meets inflammation fighter. 7.6g fiber per cup—your gut and your LDL profile are both celebrating.',
-                'Organic Quinoa': 'Complete protein + all nine amino acids. 8g protein per cooked cup. Your vegetarian run fuel, locked and loaded.',
-                'USDA Choice Beef Flank Steak': 'Iron-rich VO2 support. 29g protein, creatine for muscle power. Lean cut that respects your sat fat targets.',
-                'Organic Black Lentils': 'High-protein, fiber-packed powerhouse. 18g protein per cooked cup + 8g fiber. Plant-based recovery in every spoonful.'
+                'Organic Greek Yogurt': 'Post-run powerhouse: 20g protein per serving + live probiotics for gut health.',
+                'Organic Chia Seeds': '10g fiber + omega-3s per serving. Anti-inflammatory gold for your 15+ mile weeks.',
+                'Blueberries': 'Antioxidant treasure. Anthocyanins + LDL-fighting power. Your VO2 system loves it.',
+                'Walnut Halves': 'HDL-elevating heart hero. 8.7g unsaturated fat per ounce—lipid panel gold.',
+                'Sweet Potatoes': 'Pre-run fuel. 20g carbs per 100g + fiber for steady energy during long runs.',
+                'Organic Boneless Skinless Chicken Breasts': 'Lean recovery legend. 31g protein per 100g, only 1g sat fat.',
+                'Blackberries': 'Fiber bomb meets inflammation fighter. 7.6g fiber per cup.',
+                'Organic Quinoa': 'Complete protein + all nine amino acids. 8g protein per cooked cup.',
+                'USDA Choice Beef Flank Steak': 'Iron-rich VO2 support. 29g protein, lean cut respects sat fat targets.',
+                'Organic Black Lentils': 'High-protein powerhouse. 18g protein + 8g fiber per cooked cup.'
             };
 
+            let spotlightHtml = '';
             for (const item of spotlightItems) {
-                const spotlight = spotlights[item.name] || `${item.name}: A key player in your kitchen supporting ${(item.area_impacts || []).join(', ')}.`;
+                const callout = spotlights[item.name] || `Key player: ${(item.area_impacts || []).join(', ')}`;
                 spotlightHtml += `
-                    <div style="margin-bottom: 15px; padding: 15px; background: var(--bg-tertiary); border-left: 4px solid var(--accent-warning); border-radius: 4px;">
-                        <div style="font-weight: 600; color: var(--accent-warning); margin-bottom: 8px;">⭐ ${item.name}</div>
-                        <div style="font-size: 13px; line-height: 1.7; color: var(--text-secondary);">${spotlight}</div>
-                        <div style="font-size: 11px; margin-top: 8px; color: var(--text-secondary);">
-                            ${(item.area_impacts || []).map(tag => `<span style="display: inline-block; margin-right: 6px; padding: 2px 8px; background: var(--bg-secondary); border-radius: 12px;">${tag}</span>`).join('')}
+                    <div class="spotlight-tile">
+                        <div class="spotlight-tile-name">⭐ ${item.name}</div>
+                        <div class="spotlight-tile-callout">${callout}</div>
+                        <div class="spotlight-tile-tags">
+                            ${(item.area_impacts || []).slice(0, 3).map(tag => `<span class="spotlight-tag">${tag}</span>`).join('')}
                         </div>
                     </div>
                 `;
             }
             document.getElementById('itemSpotlights').innerHTML = spotlightHtml;
-
-            // Render expiring soon
-            let expiringHtml = '';
-            for (const [catKey, catData] of Object.entries(inventory.categories)) {
-                for (const item of catData.items) {
-                    const expDate = new Date(item.expiration_date);
-                    if (expDate <= sevenDaysFromNow && expDate > now) {
-                        expiringHtml += `<li class="warning">${item.name} - Expires ${item.expiration_date}</li>`;
-                    }
-                }
-            }
-            document.getElementById('expiringList').innerHTML = expiringHtml || '<li>No items expiring soon</li>';
-
-            // Overall Kitchen Rating
-            const score = 85 + Math.min(15, Math.round(totalFiber / 5));  // High fiber = high score
-            const foodScore = score > 95 ? 'Elite Athlete Kitchen 🏆' :
-                             score > 85 ? 'Recovery-Optimized 🎯' :
-                             'Solid Foundation 💪';
-            document.getElementById('healthScore').textContent = score;
-            document.getElementById('healthScoreLabel').textContent = foodScore;
         }
 
-        function renderMacroChart(macroData) {
-            const canvas = document.getElementById('macroChart');
-            if (!canvas) return;
-
-            const ctx = canvas.getContext('2d');
-            const total = macroData.carbs + macroData.protein + macroData.fat;
-            const carbPercent = (macroData.carbs / total) * 100;
-            const proteinPercent = (macroData.protein / total) * 100;
-            const fatPercent = (macroData.fat / total) * 100;
-
-            // Simple pie chart
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.font = '12px sans-serif';
-            ctx.fillStyle = '#a0a0a0';
-
-            const macroStatsHtml = `
-                <div style="margin-top: 15px; display: flex; gap: 20px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 150px;">
-                        <div style="font-size: 14px; font-weight: 600; color: #f59e0b;">🥗 Carbs</div>
-                        <div style="font-size: 20px; font-weight: bold; color: var(--text-primary);">${macroData.carbs.toFixed(0)}g</div>
-                        <div style="font-size: 12px; color: var(--text-secondary);">${carbPercent.toFixed(0)}% of total</div>
-                    </div>
-                    <div style="flex: 1; min-width: 150px;">
-                        <div style="font-size: 14px; font-weight: 600; color: #10b981;">💪 Protein</div>
-                        <div style="font-size: 20px; font-weight: bold; color: var(--text-primary);">${macroData.protein.toFixed(0)}g</div>
-                        <div style="font-size: 12px; color: var(--text-secondary);">${proteinPercent.toFixed(0)}% of total</div>
-                    </div>
-                    <div style="flex: 1; min-width: 150px;">
-                        <div style="font-size: 14px; font-weight: 600; color: #06b6d4;">🥜 Fat</div>
-                        <div style="font-size: 20px; font-weight: bold; color: var(--text-primary);">${macroData.fat.toFixed(0)}g</div>
-                        <div style="font-size: 12px; color: var(--text-secondary);">${fatPercent.toFixed(0)}% of total</div>
-                    </div>
-                </div>
-            `;
-            document.getElementById('macroStats').innerHTML = macroStatsHtml;
+        function toggleCategoryCard(element) {
+            const content = element.querySelector('.category-card-content');
+            const chevron = element.querySelector('.category-card-chevron');
+            content.classList.toggle('open');
+            chevron.classList.toggle('open');
         }
 
         async function completeTrip() {
