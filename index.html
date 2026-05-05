@@ -698,6 +698,10 @@
             return await response.text();
         }
 
+        function utf8ToBase64(str) {
+            return btoa(unescape(encodeURIComponent(str)));
+        }
+
         async function pushToGitHub(filename, content, message) {
             const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filename}`;
 
@@ -725,7 +729,7 @@
                     },
                     body: JSON.stringify({
                         message: message,
-                        content: btoa(content),
+                        content: utf8ToBase64(content),
                         sha: sha
                     })
                 });
