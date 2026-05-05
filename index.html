@@ -671,6 +671,11 @@
             initializeApp();
         }
 
+        // Helper function to encode UTF-8 strings to Base64 for GitHub API
+        function utf8ToBase64(str) {
+            return btoa(unescape(encodeURIComponent(str)));
+        }
+
         async function initializeApp() {
             updateSyncStatus('Connecting...');
             try {
@@ -731,7 +736,7 @@
                     },
                     body: JSON.stringify({
                         message: message,
-                        content: btoa(content),
+                        content: utf8ToBase64(content),
                         sha: sha
                     })
                 });
