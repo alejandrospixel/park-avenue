@@ -871,8 +871,8 @@
                 bought.splice(bought.indexOf(idx), 1);
             } else {
                 bought.push(idx);
-                skipped.splice(skipped.indexOf(idx), 1);
-                avoided.splice(avoided.indexOf(idx), 1);
+                if (skipped.includes(idx)) skipped.splice(skipped.indexOf(idx), 1);
+                if (avoided.includes(idx)) avoided.splice(avoided.indexOf(idx), 1);
             }
 
             localStorage.setItem('shop_bought', JSON.stringify(bought));
@@ -890,8 +890,8 @@
                 skipped.splice(skipped.indexOf(idx), 1);
             } else {
                 skipped.push(idx);
-                bought.splice(bought.indexOf(idx), 1);
-                avoided.splice(avoided.indexOf(idx), 1);
+                if (bought.includes(idx)) bought.splice(bought.indexOf(idx), 1);
+                if (avoided.includes(idx)) avoided.splice(avoided.indexOf(idx), 1);
             }
 
             localStorage.setItem('shop_bought', JSON.stringify(bought));
@@ -909,8 +909,8 @@
                 avoided.splice(avoided.indexOf(idx), 1);
             } else {
                 avoided.push(idx);
-                bought.splice(bought.indexOf(idx), 1);
-                skipped.splice(skipped.indexOf(idx), 1);
+                if (bought.includes(idx)) bought.splice(bought.indexOf(idx), 1);
+                if (skipped.includes(idx)) skipped.splice(skipped.indexOf(idx), 1);
             }
 
             localStorage.setItem('shop_bought', JSON.stringify(bought));
