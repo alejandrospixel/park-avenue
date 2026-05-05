@@ -388,7 +388,8 @@
         }
 
         .action-btn.buy.active {
-            opacity: 0.8;
+            border: 2px solid var(--accent-warning);
+            opacity: 1;
         }
 
         .action-btn.skip {
@@ -397,7 +398,8 @@
         }
 
         .action-btn.skip.active {
-            opacity: 0.8;
+            border: 2px solid var(--accent-warning);
+            opacity: 1;
         }
 
         .action-btn.avoid {
@@ -406,7 +408,8 @@
         }
 
         .action-btn.avoid.active {
-            opacity: 0.8;
+            border: 2px solid var(--accent-warning);
+            opacity: 1;
         }
 
         .cart-summary {
@@ -698,10 +701,6 @@
             return await response.text();
         }
 
-        function utf8ToBase64(str) {
-            return btoa(unescape(encodeURIComponent(str)));
-        }
-
         async function pushToGitHub(filename, content, message) {
             const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filename}`;
 
@@ -729,7 +728,7 @@
                     },
                     body: JSON.stringify({
                         message: message,
-                        content: utf8ToBase64(content),
+                        content: btoa(content),
                         sha: sha
                     })
                 });
