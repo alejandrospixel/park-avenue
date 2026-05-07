@@ -1,0 +1,141 @@
+{
+  "generated_date": "2026-05-06",
+  "source": "Costco Health-Focused Stock-Up",
+  "budget": "$200-$250",
+  "total_items": 24,
+  "total_cost": 233.89,
+  "by_category": {
+    "Fruits": {
+      "count": 5,
+      "items": [
+        {
+          "name": "Blackberries, 12 oz",
+          "price": 4.3
+        },
+        {
+          "name": "Raspberries, 12 oz",
+          "price": 4.53
+        },
+        {
+          "name": "Blueberries, 18 oz",
+          "price": 9.07
+        },
+        {
+          "name": "Bananas, 3 lbs",
+          "price": 1.69
+        },
+        {
+          "name": "Organic Bananas, 3 lbs",
+          "price": 2.49
+        }
+      ],
+      "subtotal": 22.08
+    },
+    "Vegetables": {
+      "count": 3,
+      "items": [
+        {
+          "name": "Avocado Hass Variety, 6-count",
+          "price": 5.66
+        },
+        {
+          "name": "Organic Baby Spinach, 1 lb",
+          "price": 5.44
+        },
+        {
+          "name": "Organic Broccoli Florets, 2 lbs",
+          "price": 7.93
+        }
+      ],
+      "subtotal": 19.03
+    },
+    "Dairy & Eggs": {
+      "count": 1,
+      "items": [
+        {
+          "name": "Kirkland Signature Eggs, Large, 24-count",
+          "price": 4.53
+        }
+      ],
+      "subtotal": 4.53
+    },
+    "Pantry & Dry Goods": {
+      "count": 1,
+      "items": [
+        {
+          "name": "One Degree Gluten-Free Organic Rolled Oats, 80 oz",
+          "price": 9.07
+        }
+      ],
+      "subtotal": 9.07
+    },
+    "Snacks, Candy & Nuts": {
+      "count": 5,
+      "items": [
+        {
+          "name": "Coastal Berry Trail Mix, 26 oz",
+          "price": 11.91
+        },
+        {
+          "name": "Peanut Butter Pretzels Nuggets, 55 oz",
+          "price": 11.34
+        },
+        {
+          "name": "Hoody's Peanut Butter Chocolate Mix, 44 oz",
+          "price": 13.61
+        },
+        {
+          "name": "Peanut Chocolate Candy, 62 oz",
+          "price": 15.42
+        },
+        {
+          "name": "Kirkland Signature Trail Mix, 4 lbs",
+          "price": 16.9
+        }
+      ],
+      "subtotal": 69.18
+    },
+    "Frozen Foods": {
+      "count": 9,
+      "items": [
+        {
+          "name": "Kirkland Signature Organic Mixed Vegetables, 5 lbs",
+          "price": 9.07
+        },
+        {
+          "name": "Organic Bean Rice & Cheese Burritos, 48 oz",
+          "price": 9.07
+        },
+        {
+          "name": "Kirkland Signature Organic Blueberries, 3 lbs",
+          "price": 10.2
+        },
+        {
+          "name": "Valle Nuevo Organic Mango Chunks, 5 lbs",
+          "price": 11.23
+        },
+        {
+          "name": "Kirkland Signature Stir-Fry Vegetable Blend, 5.5 lbs",
+          "price": 12.02
+        },
+        {
+          "name": "Kirkland Signature Organic Strawberries, 4 lbs",
+          "price": 12.47
+        },
+        {
+          "name": "Chicken Melts Flatbread Pocket Sandwiched, 15 ct",
+          "price": 13.61
+        },
+        {
+          "name": "Chicken & Cheese Taquitos, 30 ct",
+          "price": 15.88
+        },
+        {
+          "name": "Tyson Crispy Chicken Strips, 48 oz",
+          "price": 16.45
+        }
+      ],
+      "subtotal": 110.0
+    }
+  }
+}
