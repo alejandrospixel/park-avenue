@@ -802,8 +802,8 @@
                 const data = await fetchFromGitHub(GITHUB_FILE);
                 inventory = JSON.parse(data);
 
-                // Load shopping recommendations (embedded for now, can be external later)
-                loadShoppingRecommendations();
+                // Load shopping recommendations from GitHub
+                await loadShoppingRecommendations();
 
                 renderInventory();
                 renderShopping();
@@ -870,19 +870,38 @@
             }
         }
 
-        function loadShoppingRecommendations() {
-            shoppingRecommendations = [
-                { name: 'Organic Blueberries (Frozen)', category: 'produce', price: 12.99, impacts: ['Antioxidant-rich', 'VO2 support'] },
-                { name: 'Organic Spinach (Frozen)', category: 'produce', price: 8.99, impacts: ['Iron-rich', 'Anti-inflammatory'] },
-                { name: 'Organic Salmon Fillets', category: 'proteins', price: 24.99, impacts: ['High protein', 'Omega-3s'] },
-                { name: 'Organic Almonds (Raw)', category: 'snacks', price: 13.99, impacts: ['Heart-healthy', 'HDL-elevating'] },
-                { name: 'Grass-Fed Ground Beef', category: 'proteins', price: 18.99, impacts: ['High protein', 'Iron-rich'] },
-                { name: 'Organic Kale', category: 'produce', price: 6.99, impacts: ['Micronutrient-dense', 'Anti-inflammatory'] },
-                { name: 'Organic Sweet Potato', category: 'produce', price: 7.99, impacts: ['Pre-run fuel', 'Carb-efficient'] },
-                { name: 'Organic Almond Butter', category: 'snacks', price: 11.99, impacts: ['High protein', 'Heart-healthy'] },
-                { name: 'Wild-Caught Sardines', category: 'proteins', price: 8.99, impacts: ['High protein', 'Omega-3s'] },
-                { name: 'Organic Beet Root Powder', category: 'supplements', price: 19.99, impacts: ['VO2 support', 'Antioxidant-rich'] }
-            ];
+        async function loadShoppingRecommendations() {
+            try {
+                // Fetch Costco shopping list from GitHub
+                const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/costco_shopping_list.json`;
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error('Failed to load shopping list');
+                }
+
+                const data = await response.json();
+
+                // Transform from category structure to flat array
+                shoppingRecommendations = [];
+                for (const [category, categoryData] of Object.entries(data.by_category)) {
+                    for (const item of categoryData.items) {
+                        shoppingRecommendations.push({
+                            name: item.name,
+                            category: category.toLowerCase(),
+                            price: item.price,
+                            impacts: item.area_impacts || []
+                        });
+                    }
+                }
+
+                console.log(`Loaded ${shoppingRecommendations.length} items from Costco list`);
+            } catch (error) {
+                console.error('Error loading shopping recommendations:', error);
+                // Fallback to empty list if load fails
+                shoppingRecommendations = [];
+                showToast('Failed to load Costco list. Try again or refresh page.', 'error');
+            }
         }
 
         function switchTab(tabName) {
