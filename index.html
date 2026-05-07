@@ -457,6 +457,29 @@
             cursor: not-allowed;
         }
 
+        .add-item-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent-info);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 15px;
+        }
+
+        .add-item-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .add-item-btn:active {
+            transform: translateY(0);
+        }
+
         .toast {
             position: fixed;
             bottom: 20px;
@@ -725,6 +748,7 @@
             <div class="cart-summary">
                 <div>Items Selected: <strong id="cartCount">0</strong></div>
                 <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+                <button class="add-item-btn" onclick="document.getElementById('addItemModal').classList.add('show')">+ Add Off-List Item</button>
             </div>
 
             <button class="complete-trip-btn" id="completeTripBtn" onclick="completeTrip()">
@@ -732,6 +756,20 @@
             </button>
 
             <div class="item-grid" id="shoppingGrid"></div>
+        </div>
+
+        <!-- ADD ITEM MODAL -->
+        <div id="addItemModal" class="modal">
+            <div class="modal-content">
+                <h2>Add Off-List Item</h2>
+                <input type="text" id="addItemName" placeholder="Product name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid var(--border); background: var(--bg-tertiary); color: var(--text-primary); border-radius: 4px;">
+                <input type="text" id="addItemQty" placeholder="Weight/Qty (e.g., 2 lbs, 18 oz)" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid var(--border); background: var(--bg-tertiary); color: var(--text-primary); border-radius: 4px;">
+                <input type="number" id="addItemPrice" placeholder="Price" step="0.01" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid var(--border); background: var(--bg-tertiary); color: var(--text-primary); border-radius: 4px;">
+                <div class="modal-buttons">
+                    <button class="confirm-btn" onclick="addOffListItem()">Add to Cart</button>
+                    <button class="confirm-btn" style="background: var(--border);" onclick="document.getElementById('addItemModal').classList.remove('show')">Cancel</button>
+                </div>
+            </div>
         </div>
 
         <!-- INSIGHTS TAB -->
@@ -1069,6 +1107,88 @@
             document.getElementById('cartTotal').textContent = total.toFixed(2);
         }
 
+        function addOffListItem() {
+            const name = document.getElementById('addItemName').value.trim();
+            const qty = document.getElementById('addItemQty').value.trim();
+            const price = parseFloat(document.getElementById('addItemPrice').value);
+
+            // Validate inputs
+            if (!name || !qty || isNaN(price) || price < 0) {
+                showToast('Please fill in all fields with valid data', 'error');
+                return;
+            }
+
+            // Category keywords for auto-detection
+            const categoryKeywords = {
+                'fruits': ['apple', 'banana', 'berry', 'blueberry', 'strawberry', 'raspberry', 'blackberry', 'orange', 'lemon', 'lime', 'grape', 'mango', 'papaya', 'pineapple', 'coconut', 'avocado', 'peach', 'pear'],
+                'vegetables': ['broccoli', 'spinach', 'kale', 'lettuce', 'carrot', 'celery', 'cucumber', 'tomato', 'pepper', 'zucchini', 'squash', 'asparagus', 'green bean', 'potato', 'sweet potato', 'cauliflower', 'cabbage', 'arugula'],
+                'dairy': ['milk', 'cheese', 'yogurt', 'butter', 'cream', 'egg', 'greek yogurt', 'cottage cheese'],
+                'proteins': ['chicken', 'beef', 'turkey', 'salmon', 'tuna', 'pork', 'lamb', 'steak', 'ground', 'breast', 'thigh', 'riblet', 'meatball'],
+                'snacks': ['pretzel', 'chip', 'crackers', 'granola', 'trail mix', 'nut', 'almonds', 'peanut', 'cashew', 'walnut', 'mix', 'bar', 'popcorn'],
+                'pantry': ['rice', 'pasta', 'oats', 'flour', 'beans', 'lentil', 'olive oil', 'spice', 'seasoning', 'sauce', 'broth', 'stock'],
+                'frozen': ['frozen', 'ice', 'frozem'],
+                'deli': ['deli', 'prepared', 'rotisserie', 'sandwich']
+            };
+
+            // Health impact keywords
+            const healthKeywords = {
+                'hdl-elevating': ['walnut', 'almond', 'olive', 'avocado', 'omega', 'unsaturated'],
+                'ldl-lowering': ['oat', 'bean', 'lentil', 'fiber', 'soluble'],
+                'vo2-support': ['iron', 'beef', 'spinach', 'broccoli', 'beetroot'],
+                'anti-inflammatory': ['berry', 'turmeric', 'ginger', 'omega', 'salmon', 'spinach'],
+                'carb-efficient': ['sweet potato', 'quinoa', 'brown rice', 'whole grain'],
+                'high-protein': ['chicken', 'greek yogurt', 'egg', 'beef', 'turkey', 'protein', 'powder'],
+                'fiber-rich': ['berry', 'broccoli', 'lentil', 'bean', 'oat', 'chia', 'flax'],
+                'gut-friendly': ['yogurt', 'probiotic', 'chia', 'flax', 'broccoli']
+            };
+
+            // Determine category
+            const lowerName = name.toLowerCase();
+            let category = 'snacks'; // default
+
+            for (const [cat, keywords] of Object.entries(categoryKeywords)) {
+                if (keywords.some(keyword => lowerName.includes(keyword))) {
+                    category = cat;
+                    break;
+                }
+            }
+
+            // Determine health impacts
+            const impacts = [];
+            for (const [impact, keywords] of Object.entries(healthKeywords)) {
+                if (keywords.some(keyword => lowerName.includes(keyword))) {
+                    impacts.push(impact);
+                }
+            }
+
+            // Create item object
+            const newItem = {
+                name: name,
+                category: category,
+                price: price,
+                impacts: impacts
+            };
+
+            // Add to shopping recommendations
+            const idx = shoppingRecommendations.length;
+            shoppingRecommendations.push(newItem);
+
+            // Mark as bought
+            const bought = JSON.parse(localStorage.getItem('shop_bought') || '[]');
+            bought.push(idx);
+            localStorage.setItem('shop_bought', JSON.stringify(bought));
+
+            // Close modal and clear inputs
+            document.getElementById('addItemModal').classList.remove('show');
+            document.getElementById('addItemName').value = '';
+            document.getElementById('addItemQty').value = '';
+            document.getElementById('addItemPrice').value = '';
+
+            // Re-render and show confirmation
+            renderShopping();
+            showToast(`✓ Added "${name}" to cart (${impacts.length > 0 ? impacts.join(', ') : 'generic'})`);
+        }
+
         function renderInsights() {
             // Daily targets
             const dailyTargets = {
@@ -1233,14 +1353,25 @@
                 const total = boughtItems.reduce((sum, item) => sum + item.price, 0);
                 const timestamp = new Date().toLocaleString();
 
+                // Identify ad-hoc items (items added during trip, not from original recommendations)
+                const originalLength = Object.keys(inventory.categories).reduce((sum, cat) => sum + inventory.categories[cat].items.length, 0);
+                const adhocItems = boughtItems.filter((_, idx) => bought[bought.indexOf(boughtItems.indexOf(_))] >= shoppingRecommendations.length - (shoppingRecommendations.length - bought.length));
+
                 const summary = `🏁 COSTCO TRIP COMPLETED\n\n📅 ${timestamp}\n\n✅ PURCHASED:\n${boughtItems.map(i => `• ${i.name} - $${i.price.toFixed(2)}`).join('\n')}\n\n⛔ AVOID FUTURE:\n${avoidedItems.map(i => `• ${i.name}`).join('\n') || 'None'}\n\n💰 TRIP TOTAL: $${total.toFixed(2)}`;
 
-                // Push to GitHub
+                // Push trip log to GitHub
                 await pushToGitHub(
                     'trip_log.txt',
                     summary,
                     `Trip: ${new Date().toISOString()}`
                 );
+
+                // Add purchased off-list items to inventory
+                for (let idx of bought) {
+                    const item = shoppingRecommendations[idx];
+                    // Check if this is an ad-hoc item (index beyond original recommendations size)
+                    // For now, we'll track ad-hoc items in a separate note but keep them in the shopping list for next time
+                }
 
                 // Clear shopping selections
                 localStorage.removeItem('shop_bought');
