@@ -723,6 +723,7 @@
             <button class="tab-button active" onclick="switchTab('inventory')">📦 Inventory</button>
             <button class="tab-button" onclick="switchTab('shopping')">🛒 Shopping</button>
             <button class="tab-button" onclick="switchTab('insights')">📊 Insights</button>
+            <button class="tab-button" onclick="switchTab('recipes')">🍳 Recipes</button>
         </div>
 
         <!-- INVENTORY TAB -->
@@ -795,6 +796,59 @@
                 <div id="itemSpotlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;"></div>
             </div>
         </div>
+
+        <!-- RECIPES TAB -->
+        <div id="recipes" class="tab-content">
+            <div style="background: linear-gradient(135deg, #0d7377, #1a1a1a); padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h2 style="margin-bottom: 15px;">🍳 Recipe Finder</h2>
+                <p style="color: #a0a0a0; font-size: 14px;">Filter recipes by health goals and difficulty. Green = all ingredients in stock, Yellow = some missing, Red = many missing.</p>
+            </div>
+
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 15px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 10px;">Health Goals</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="hdl-elevating" onchange="filterRecipes()" style="cursor: pointer;"> HDL-Elevating
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="ldl-lowering" onchange="filterRecipes()" style="cursor: pointer;"> LDL-Lowering
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="vo2-support" onchange="filterRecipes()" style="cursor: pointer;"> VO2 Support
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="anti-inflammatory" onchange="filterRecipes()" style="cursor: pointer;"> Anti-Inflammatory
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="carb-efficient" onchange="filterRecipes()" style="cursor: pointer;"> Carb-Efficient
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="high-protein" onchange="filterRecipes()" style="cursor: pointer;"> High-Protein
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="fiber-rich" onchange="filterRecipes()" style="cursor: pointer;"> Fiber-Rich
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="gut-friendly" onchange="filterRecipes()" style="cursor: pointer;"> Gut-Friendly
+                    </label>
+                </div>
+
+                <h3 style="margin-top: 15px; margin-bottom: 10px;">Difficulty</h3>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="Easy" onchange="filterRecipes()" style="cursor: pointer;"> Easy
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="Medium" onchange="filterRecipes()" style="cursor: pointer;"> Medium
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" value="Complex" onchange="filterRecipes()" style="cursor: pointer;"> Complex
+                    </label>
+                </div>
+            </div>
+
+            <div id="recipeResults" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px;"></div>
+        </div>
     </div>
 
     <script>
@@ -805,6 +859,7 @@
         let githubToken = null;
         let inventory = null;
         let shoppingRecommendations = [];
+        let recipes = null;
 
         // Initialize app
         document.addEventListener('DOMContentLoaded', async () => {
@@ -843,9 +898,13 @@
                 // Load shopping recommendations from GitHub
                 await loadShoppingRecommendations();
 
+                // Load recipes from GitHub
+                await loadRecipes();
+
                 renderInventory();
                 renderShopping();
                 renderInsights();
+                filterRecipes();
                 updateSyncStatus('Connected', true);
             } catch (error) {
                 console.error('Init error:', error);
@@ -1400,6 +1459,246 @@
 
         function filterInventory() {
             // TODO: Add search/filter logic
+        }
+
+        async function loadRecipes() {
+            try {
+                const data = await fetchFromGitHub('recipes.json');
+                recipes = JSON.parse(data);
+            } catch (error) {
+                console.error('Error loading recipes:', error);
+                recipes = { recipes: [] };
+            }
+        }
+
+        function calculateIngredientMatch(recipe) {
+            if (!inventory || !recipe.ingredients) return 0;
+
+            const allItems = {};
+            for (const category in inventory.categories) {
+                for (const item of inventory.categories[category].items || []) {
+                    const name = item.name.toLowerCase();
+                    allItems[name] = item;
+                }
+            }
+
+            let matched = 0;
+            let total = recipe.ingredients.length;
+
+            recipe.ingredients.forEach(ing => {
+                const ingName = ing.name.toLowerCase();
+                if (allItems[ingName]) {
+                    matched++;
+                } else {
+                    // Check substitutes
+                    for (const sub of ing.substitutes || []) {
+                        if (allItems[sub.toLowerCase()]) {
+                            matched++;
+                            return;
+                        }
+                    }
+                }
+            });
+
+            return total > 0 ? Math.round((matched / total) * 100) : 0;
+        }
+
+        function getMatchColor(percentage) {
+            if (percentage >= 80) return 'var(--accent-success)';
+            if (percentage >= 50) return 'var(--accent-warning)';
+            return 'var(--accent-danger)';
+        }
+
+        function filterRecipes() {
+            if (!recipes || !recipes.recipes) return;
+
+            const selectedGoals = Array.from(document.querySelectorAll('input[type="checkbox"][value*="-"], input[type="checkbox"][value*="high"]'))
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            const selectedDifficulties = Array.from(document.querySelectorAll('input[type="checkbox"][value="Easy"], input[type="checkbox"][value="Medium"], input[type="checkbox"][value="Complex"]'))
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            let filtered = recipes.recipes;
+
+            if (selectedGoals.length > 0) {
+                filtered = filtered.filter(recipe =>
+                    recipe.health_impacts &&
+                    recipe.health_impacts.some(impact => selectedGoals.includes(impact))
+                );
+            }
+
+            if (selectedDifficulties.length > 0) {
+                filtered = filtered.filter(recipe => selectedDifficulties.includes(recipe.difficulty));
+            }
+
+            renderRecipes(filtered);
+        }
+
+        function renderRecipes(recipeList) {
+            const container = document.getElementById('recipeResults');
+            container.innerHTML = '';
+
+            if (!recipeList || recipeList.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary); padding: 40px;">No recipes match your filters. Try adjusting your selections.</div>';
+                return;
+            }
+
+            recipeList.forEach(recipe => {
+                const match = calculateIngredientMatch(recipe);
+                const matchColor = getMatchColor(match);
+                const matchLabel = match >= 80 ? '✓ Ready to Cook' : match >= 50 ? '⚠ Some Subs' : '✗ Missing Ingredients';
+
+                const card = document.createElement('div');
+                card.style.cssText = `
+                    background: var(--bg-secondary);
+                    border: 1px solid var(--border);
+                    border-radius: 6px;
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                `;
+                card.onmouseover = () => card.style.borderColor = 'var(--accent-primary)';
+                card.onmouseout = () => card.style.borderColor = 'var(--border)';
+
+                const healthTags = (recipe.health_impacts || [])
+                    .slice(0, 2)
+                    .map(tag => `<span class="tag" style="font-size: 10px; padding: 2px 6px;">${tag}</span>`)
+                    .join('');
+
+                card.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                        <div style="flex: 1;">
+                            <h4 style="margin: 0 0 4px; font-size: 16px;">${recipe.name}</h4>
+                            <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 6px;">
+                                ${recipe.difficulty} • ${recipe.prep_time_min} min • ${recipe.servings} servings
+                            </div>
+                        </div>
+                        <div style="text-align: center; min-width: 60px;">
+                            <div style="font-size: 24px; font-weight: bold; color: ${matchColor}; line-height: 1;">${match}%</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">${matchLabel}</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px;">
+                        ${healthTags}
+                    </div>
+
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 10px;">
+                        <strong>Nutrition:</strong> ${recipe.nutrition.carbs_g}g carbs • ${recipe.nutrition.protein_g}g protein • ${recipe.nutrition.fat_g}g fat (${recipe.nutrition.saturated_fat_g}g sat)
+                    </div>
+
+                    <button class="action-btn buy" onclick="addRecipeToMealPlan(event, '${recipe.id}')" style="width: 100%; margin-top: auto;">
+                        Cook This →
+                    </button>
+                `;
+
+                card.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'BUTTON') {
+                        showRecipeDetail(recipe);
+                    }
+                });
+
+                container.appendChild(card);
+            });
+        }
+
+        function showRecipeDetail(recipe) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            `;
+
+            const match = calculateIngredientMatch(recipe);
+            const matchColor = getMatchColor(match);
+
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: var(--bg-secondary);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 25px;
+                max-width: 600px;
+                max-height: 80vh;
+                overflow-y: auto;
+                color: var(--text-primary);
+            `;
+
+            const ingredients = (recipe.ingredients || [])
+                .map(ing => `<div style="padding: 6px 0; border-bottom: 1px solid var(--border);">
+                    <strong>${ing.name}</strong> • ${ing.quantity} ${ing.unit}
+                    ${ing.substitutes && ing.substitutes.length > 0 ? `<div style="font-size: 12px; color: var(--text-secondary);">Subs: ${ing.substitutes.join(', ')}</div>` : ''}
+                </div>`)
+                .join('');
+
+            content.innerHTML = `
+                <h2 style="margin-bottom: 10px;">${recipe.name}</h2>
+                <div style="display: flex; gap: 15px; margin-bottom: 15px; color: var(--text-secondary); font-size: 14px;">
+                    <div>${recipe.difficulty}</div>
+                    <div>${recipe.prep_time_min} min prep</div>
+                    <div>${recipe.servings} servings</div>
+                </div>
+
+                <div style="background: ${matchColor}22; border-left: 3px solid ${matchColor}; padding: 10px; margin-bottom: 15px;">
+                    <div style="font-size: 12px; color: var(--text-secondary);">Ingredient Match</div>
+                    <div style="font-size: 20px; font-weight: bold; color: ${matchColor};">${match}%</div>
+                </div>
+
+                <h3 style="margin-top: 15px;">Nutrition (per serving)</h3>
+                <div style="background: var(--bg-tertiary); padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 13px;">
+                    <div>Carbs: <strong>${recipe.nutrition.carbs_g}g</strong></div>
+                    <div>Protein: <strong>${recipe.nutrition.protein_g}g</strong></div>
+                    <div>Fat: <strong>${recipe.nutrition.fat_g}g</strong> (${recipe.nutrition.saturated_fat_g}g sat)</div>
+                    <div>Fiber: <strong>${recipe.nutrition.fiber_g}g</strong></div>
+                    <div>Calories: <strong>${recipe.nutrition.calories}</strong></div>
+                </div>
+
+                <h3 style="margin-top: 15px;">Ingredients</h3>
+                <div style="margin-bottom: 15px;">
+                    ${ingredients}
+                </div>
+
+                <h3 style="margin-top: 15px;">Instructions</h3>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 15px;">
+                    ${recipe.instructions}
+                </p>
+
+                <div style="display: flex; gap: 8px;">
+                    <button class="action-btn buy" onclick="addRecipeToMealPlan(event, '${recipe.id}'); this.closest('div').closest('div').remove();" style="flex: 1;">
+                        Cook This →
+                    </button>
+                    <button style="flex: 1; padding: 10px; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); cursor: pointer;" onclick="this.closest('div').closest('div').remove();">
+                        Close
+                    </button>
+                </div>
+            `;
+
+            modal.appendChild(content);
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+            document.body.appendChild(modal);
+        }
+
+        function addRecipeToMealPlan(event, recipeId) {
+            event.stopPropagation();
+            const recipe = recipes.recipes.find(r => r.id === recipeId);
+            if (!recipe) return;
+
+            // For now, just show a toast. In the future, this would persist to meal_plans.json
+            showToast(`Added "${recipe.name}" to meal plan!`, 'success');
         }
 
         function showToast(message, type = 'success') {
