@@ -1465,9 +1465,11 @@
             try {
                 const data = await fetchFromGitHub('recipes.json');
                 recipes = JSON.parse(data);
+                console.log('Loaded ' + recipes.recipes.length + ' recipes');
             } catch (error) {
                 console.error('Error loading recipes:', error);
                 recipes = { recipes: [] };
+                showToast('Could not load recipes from GitHub. Make sure recipes.json is deployed.', 'error');
             }
         }
 
