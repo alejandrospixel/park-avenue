@@ -1,19 +1,21 @@
 {
   "metadata": {
-    "last_updated": "2026-05-03T16:00:00Z",
+    "last_updated": "2026-05-07T18:30:00.000000Z",
     "kitchen_location": "Cincinnati, OH",
     "total_items_by_category": {
-      "proteins": 5,
-      "produce": 15,
-      "pantry_grains_seeds": 11,
+      "proteins": 9,
+      "produce": 19,
+      "pantry_grains_seeds": 12,
       "condiments_sauces": 19,
       "oils_vinegars": 3,
       "sweeteners": 2,
-      "snacks": 7,
-      "dairy": 2,
+      "snacks": 8,
+      "dairy": 3,
       "seasonings": 3,
       "beverages": 1,
-      "tortillas": 1
+      "tortillas": 1,
+      "frozen": 2,
+      "dips": 1
     }
   },
   "categories": {
@@ -38,10 +40,20 @@
             "carbs_g": 0,
             "fat_g": 11,
             "saturated_fat_g": 3,
-            "key_micronutrients": ["Iron", "B vitamins", "Zinc", "Selenium"],
+            "key_micronutrients": [
+              "Iron",
+              "B vitamins",
+              "Zinc",
+              "Selenium"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["High protein", "Muscle repair", "Post-run recovery", "Iron-rich"],
+          "area_impacts": [
+            "High protein",
+            "Muscle repair",
+            "Post-run recovery",
+            "Iron-rich"
+          ],
           "is_low": false
         },
         {
@@ -62,10 +74,20 @@
             "carbs_g": 0,
             "fat_g": 3.6,
             "saturated_fat_g": 1,
-            "key_micronutrients": ["B6", "B12", "Niacin", "Selenium"],
+            "key_micronutrients": [
+              "B6",
+              "B12",
+              "Niacin",
+              "Selenium"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["High protein", "Muscle repair", "Low sat fat", "Post-run recovery"],
+          "area_impacts": [
+            "High protein",
+            "Muscle repair",
+            "Low sat fat",
+            "Post-run recovery"
+          ],
           "is_low": false
         },
         {
@@ -86,10 +108,20 @@
             "carbs_g": 0,
             "fat_g": 8,
             "saturated_fat_g": 3.2,
-            "key_micronutrients": ["Iron", "B12", "Zinc", "Creatine"],
+            "key_micronutrients": [
+              "Iron",
+              "B12",
+              "Zinc",
+              "Creatine"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["High protein", "VO2 support", "Iron-rich", "Muscle repair"],
+          "area_impacts": [
+            "High protein",
+            "VO2 support",
+            "Iron-rich",
+            "Muscle repair"
+          ],
           "is_low": false
         },
         {
@@ -110,10 +142,21 @@
             "carbs_g": 0.6,
             "fat_g": 5.3,
             "saturated_fat_g": 1.6,
-            "key_micronutrients": ["Choline", "B12", "Selenium", "Lutein", "Zeaxanthin"],
+            "key_micronutrients": [
+              "Choline",
+              "B12",
+              "Selenium",
+              "Lutein",
+              "Zeaxanthin"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["High protein", "Brain health", "Antioxidant-rich", "Post-run recovery"],
+          "area_impacts": [
+            "High protein",
+            "Brain health",
+            "Antioxidant-rich",
+            "Post-run recovery"
+          ],
           "is_low": false
         },
         {
@@ -134,10 +177,147 @@
             "carbs_g": 1,
             "fat_g": 0.5,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["Gelatin", "Collagen", "Amino acids"],
+            "key_micronutrients": [
+              "Gelatin",
+              "Collagen",
+              "Amino acids"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Muscle repair", "Gut-friendly", "Anti-inflammatory"],
+          "area_impacts": [
+            "Muscle repair",
+            "Gut-friendly",
+            "Anti-inflammatory"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "protein_chicken_sausage_jones_001",
+          "name": "Fully Cooked Chicken Sausage Links",
+          "brand": "Jones Dairy Farm",
+          "quantity": 3,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Pre-cooked, ready to heat and eat",
+          "nutrition": {
+            "serving_size": "1 link (55g)",
+            "serving_size_unit": "grams",
+            "calories": 110,
+            "protein_g": 12,
+            "carbs_g": 2,
+            "fat_g": 6,
+            "saturated_fat_g": 2.5,
+            "key_micronutrients": [
+              "B12",
+              "Selenium"
+            ],
+            "fiber_g": 0
+          },
+          "area_impacts": [
+            "High protein",
+            "Convenient",
+            "Post-run recovery"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "protein_chicken_strips_justbare_001",
+          "name": "Spicy Chicken Lightly Breaded Strips",
+          "brand": "Just Bare",
+          "quantity": 3,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Versatile protein, ready to cook",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 165,
+            "protein_g": 28,
+            "carbs_g": 3,
+            "fat_g": 4,
+            "saturated_fat_g": 1,
+            "key_micronutrients": [
+              "B6",
+              "Niacin",
+              "Selenium"
+            ],
+            "fiber_g": 0
+          },
+          "area_impacts": [
+            "High protein",
+            "Low sat fat",
+            "Muscle repair"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "protein_chicken_chipotle_001",
+          "name": "Hand Pulled Chipotle Chicken Breast",
+          "brand": "Kirkland Signature",
+          "quantity": 1,
+          "unit": "package",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Pre-cooked, convenient protein option",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 150,
+            "protein_g": 31,
+            "carbs_g": 0,
+            "fat_g": 2,
+            "saturated_fat_g": 0.5,
+            "key_micronutrients": [
+              "B6",
+              "B12",
+              "Niacin"
+            ],
+            "fiber_g": 0
+          },
+          "area_impacts": [
+            "High protein",
+            "Low sat fat",
+            "Anti-inflammatory"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "protein_beef_ny_steak_prime_001",
+          "name": "USDA Prime Beef Loin New York Steak",
+          "brand": "Kirkland Signature",
+          "quantity": 1,
+          "unit": "package",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Premium cut, ideal for grilling",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 250,
+            "protein_g": 26,
+            "carbs_g": 0,
+            "fat_g": 15,
+            "saturated_fat_g": 6,
+            "key_micronutrients": [
+              "Iron",
+              "B12",
+              "Zinc",
+              "Creatine"
+            ],
+            "fiber_g": 0
+          },
+          "area_impacts": [
+            "High protein",
+            "Iron-rich",
+            "VO2 support",
+            "Muscle repair"
+          ],
           "is_low": false
         }
       ]
@@ -163,10 +343,18 @@
             "carbs_g": 9,
             "fat_g": 0.1,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Quercetin", "Chromium"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Quercetin",
+              "Chromium"
+            ],
             "fiber_g": 1.7
           },
-          "area_impacts": ["Anti-inflammatory", "Antioxidant-rich", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Antioxidant-rich",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -187,10 +375,19 @@
             "carbs_g": 20,
             "fat_g": 0.1,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin A", "Potassium", "Manganese"],
+            "key_micronutrients": [
+              "Vitamin A",
+              "Potassium",
+              "Manganese"
+            ],
             "fiber_g": 3
           },
-          "area_impacts": ["Carb-efficient", "Pre-run fuel", "Micronutrient-dense", "Fiber bomb"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Pre-run fuel",
+            "Micronutrient-dense",
+            "Fiber bomb"
+          ],
           "is_low": false
         },
         {
@@ -211,10 +408,18 @@
             "carbs_g": 25,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Potassium"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Potassium"
+            ],
             "fiber_g": 4.4
           },
-          "area_impacts": ["Carb-efficient", "Fiber bomb", "Antioxidant-rich", "Pre-run fuel"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Fiber bomb",
+            "Antioxidant-rich",
+            "Pre-run fuel"
+          ],
           "is_low": false
         },
         {
@@ -223,8 +428,8 @@
           "brand": "Fresh",
           "quantity": 12,
           "unit": "oz",
-          "date_added": "2026-05-02",
-          "expiration_date": "2026-05-06",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-13",
           "storage_location": "fridge",
           "notes": "Fresh berries, eat within 3-4 days",
           "nutrition": {
@@ -235,10 +440,19 @@
             "carbs_g": 12,
             "fat_g": 0.7,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Ellagic acid", "Anthocyanins"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Ellagic acid",
+              "Anthocyanins"
+            ],
             "fiber_g": 6.5
           },
-          "area_impacts": ["Antioxidant-rich", "Inflammation fighter", "Fiber bomb", "LDL-lowering"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Inflammation fighter",
+            "Fiber bomb",
+            "LDL-lowering"
+          ],
           "is_low": false
         },
         {
@@ -247,8 +461,8 @@
           "brand": "Fresh",
           "quantity": 12,
           "unit": "oz",
-          "date_added": "2026-05-02",
-          "expiration_date": "2026-05-06",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-13",
           "storage_location": "fridge",
           "notes": "Fresh berries, eat within 3-4 days",
           "nutrition": {
@@ -259,10 +473,19 @@
             "carbs_g": 10,
             "fat_g": 0.4,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Vitamin K", "Anthocyanins"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Anthocyanins"
+            ],
             "fiber_g": 5.3
           },
-          "area_impacts": ["Antioxidant-rich", "Inflammation fighter", "Fiber bomb", "LDL-lowering"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Inflammation fighter",
+            "Fiber bomb",
+            "LDL-lowering"
+          ],
           "is_low": false
         },
         {
@@ -271,8 +494,8 @@
           "brand": "Fresh",
           "quantity": 18,
           "unit": "oz",
-          "date_added": "2026-05-02",
-          "expiration_date": "2026-05-08",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-13",
           "storage_location": "fridge",
           "notes": "Fresh, great for yogurt snack and smoothies",
           "nutrition": {
@@ -283,10 +506,19 @@
             "carbs_g": 14.5,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Vitamin K", "Anthocyanins"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Anthocyanins"
+            ],
             "fiber_g": 2.4
           },
-          "area_impacts": ["Antioxidant-rich", "Inflammation fighter", "LDL-lowering", "VO2 support"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Inflammation fighter",
+            "LDL-lowering",
+            "VO2 support"
+          ],
           "is_low": false
         },
         {
@@ -295,10 +527,10 @@
           "brand": "Kirkland Signature",
           "quantity": 4,
           "unit": "lbs",
-          "date_added": "2026-04-28",
-          "expiration_date": "2026-05-06",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-14",
           "storage_location": "fridge",
-          "notes": "Fresh, great for snacking and breakfast bowls",
+          "notes": "Purchased within last week, 8 lbs total",
           "nutrition": {
             "serving_size": "100g",
             "serving_size_unit": "grams",
@@ -307,10 +539,19 @@
             "carbs_g": 7.7,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Anthocyanins", "Ellagic acid"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Anthocyanins",
+              "Ellagic acid"
+            ],
             "fiber_g": 2
           },
-          "area_impacts": ["Antioxidant-rich", "Inflammation fighter", "LDL-lowering", "Micronutrient-dense"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Inflammation fighter",
+            "LDL-lowering",
+            "Micronutrient-dense"
+          ],
           "is_low": false
         },
         {
@@ -331,20 +572,27 @@
             "carbs_g": 12,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Anthocyanins"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Anthocyanins"
+            ],
             "fiber_g": 2.5
           },
-          "area_impacts": ["Antioxidant-rich", "Inflammation fighter", "LDL-lowering"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Inflammation fighter",
+            "LDL-lowering"
+          ],
           "is_low": false
         },
         {
           "id": "produce_broccoli_kirkland_001",
           "name": "Organic Broccoli Florets",
           "brand": "Kirkland Signature",
-          "quantity": 4,
+          "quantity": 12,
           "unit": "lbs",
-          "date_added": "2026-04-28",
-          "expiration_date": "2026-05-18",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-06-04",
           "storage_location": "freezer",
           "notes": "Frozen, ready to roast or steam",
           "nutrition": {
@@ -355,10 +603,19 @@
             "carbs_g": 7,
             "fat_g": 0.4,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Vitamin K", "Sulforaphane"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Sulforaphane"
+            ],
             "fiber_g": 2.4
           },
-          "area_impacts": ["Anti-inflammatory", "Micronutrient-dense", "Low sat fat", "Fiber bomb"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Micronutrient-dense",
+            "Low sat fat",
+            "Fiber bomb"
+          ],
           "is_low": false
         },
         {
@@ -379,10 +636,18 @@
             "carbs_g": 7,
             "fat_g": 0.4,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Vitamin K", "Sulforaphane"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Sulforaphane"
+            ],
             "fiber_g": 2.4
           },
-          "area_impacts": ["Anti-inflammatory", "Micronutrient-dense", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Micronutrient-dense",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -403,10 +668,19 @@
             "carbs_g": 14,
             "fat_g": 0.4,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Vitamin K", "Folate"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Folate"
+            ],
             "fiber_g": 2.6
           },
-          "area_impacts": ["High protein", "Carb-efficient", "Fiber bomb", "Micronutrient-dense"],
+          "area_impacts": [
+            "High protein",
+            "Carb-efficient",
+            "Fiber bomb",
+            "Micronutrient-dense"
+          ],
           "is_low": true
         },
         {
@@ -427,10 +701,19 @@
             "carbs_g": 9,
             "fat_g": 15,
             "saturated_fat_g": 2.1,
-            "key_micronutrients": ["Potassium", "Folate", "Vitamin K"],
+            "key_micronutrients": [
+              "Potassium",
+              "Folate",
+              "Vitamin K"
+            ],
             "fiber_g": 7
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat", "Fiber bomb", "Heart-healthy"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat",
+            "Fiber bomb",
+            "Heart-healthy"
+          ],
           "is_low": false
         },
         {
@@ -451,10 +734,19 @@
             "carbs_g": 10,
             "fat_g": 0.2,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Beta-carotene", "Vitamin K", "Potassium"],
+            "key_micronutrients": [
+              "Beta-carotene",
+              "Vitamin K",
+              "Potassium"
+            ],
             "fiber_g": 2.8
           },
-          "area_impacts": ["Anti-inflammatory", "VO2 support", "Low sat fat", "Micronutrient-dense"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "VO2 support",
+            "Low sat fat",
+            "Micronutrient-dense"
+          ],
           "is_low": false
         },
         {
@@ -475,10 +767,150 @@
             "carbs_g": 33,
             "fat_g": 0.5,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C", "Allicin", "Manganese"],
+            "key_micronutrients": [
+              "Vitamin C",
+              "Allicin",
+              "Manganese"
+            ],
             "fiber_g": 2.1
           },
-          "area_impacts": ["Anti-inflammatory", "Antioxidant-rich", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Antioxidant-rich",
+            "Low sat fat"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "produce_bananas_001",
+          "name": "Bananas",
+          "brand": "Fresh",
+          "quantity": 3,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-14",
+          "storage_location": "counter",
+          "notes": "Just ripened, ready to eat",
+          "nutrition": {
+            "serving_size": "1 medium banana",
+            "serving_size_unit": "count",
+            "calories": 105,
+            "protein_g": 1.3,
+            "carbs_g": 27,
+            "fat_g": 0.3,
+            "saturated_fat_g": 0.1,
+            "key_micronutrients": [
+              "Potassium",
+              "Vitamin B6",
+              "Vitamin C"
+            ],
+            "fiber_g": 3.1
+          },
+          "area_impacts": [
+            "Carb-efficient",
+            "Pre-run fuel",
+            "Micronutrient-dense"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "produce_spinach_001",
+          "name": "Organic Spinach",
+          "brand": "Fresh",
+          "quantity": 1,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-17",
+          "storage_location": "fridge",
+          "notes": "Fresh greens, great for salads and cooking",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 23,
+            "protein_g": 2.7,
+            "carbs_g": 3.6,
+            "fat_g": 0.4,
+            "saturated_fat_g": 0.1,
+            "key_micronutrients": [
+              "Iron",
+              "Vitamin K",
+              "Folate",
+              "Lutein"
+            ],
+            "fiber_g": 2.2
+          },
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Micronutrient-dense",
+            "Low sat fat"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "produce_brussels_sprouts_001",
+          "name": "Organic Brussels Sprouts",
+          "brand": "Fresh",
+          "quantity": 2,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-21",
+          "storage_location": "fridge",
+          "notes": "Ready to roast or steam",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 43,
+            "protein_g": 3.4,
+            "carbs_g": 9,
+            "fat_g": 0.4,
+            "saturated_fat_g": 0.1,
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin K",
+              "Folate",
+              "Sulforaphane"
+            ],
+            "fiber_g": 2.4
+          },
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Micronutrient-dense",
+            "Low sat fat",
+            "Fiber bomb"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "produce_kiwi_gold_001",
+          "name": "Gold Kiwi",
+          "brand": "Fresh",
+          "quantity": 2,
+          "unit": "lbs",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-21",
+          "storage_location": "counter",
+          "notes": "Sweet variety, ripe and ready",
+          "nutrition": {
+            "serving_size": "1 medium kiwi",
+            "serving_size_unit": "count",
+            "calories": 61,
+            "protein_g": 1.1,
+            "carbs_g": 15,
+            "fat_g": 0.5,
+            "saturated_fat_g": 0,
+            "key_micronutrients": [
+              "Vitamin C",
+              "Vitamin E",
+              "Potassium",
+              "Actinidin"
+            ],
+            "fiber_g": 3
+          },
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Micronutrient-dense",
+            "Fiber bomb"
+          ],
           "is_low": false
         }
       ]
@@ -504,10 +936,19 @@
             "carbs_g": 27,
             "fat_g": 3,
             "saturated_fat_g": 0.5,
-            "key_micronutrients": ["Manganese", "Phosphorus", "Magnesium"],
+            "key_micronutrients": [
+              "Manganese",
+              "Phosphorus",
+              "Magnesium"
+            ],
             "fiber_g": 4
           },
-          "area_impacts": ["Carb-efficient", "Fiber bomb", "Pre-run fuel", "Gut-friendly"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Fiber bomb",
+            "Pre-run fuel",
+            "Gut-friendly"
+          ],
           "is_low": false
         },
         {
@@ -528,10 +969,19 @@
             "carbs_g": 21,
             "fat_g": 1.9,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["Manganese", "Magnesium", "Phosphorus"],
+            "key_micronutrients": [
+              "Manganese",
+              "Magnesium",
+              "Phosphorus"
+            ],
             "fiber_g": 2.8
           },
-          "area_impacts": ["High protein", "Carb-efficient", "Micronutrient-dense", "Low sat fat"],
+          "area_impacts": [
+            "High protein",
+            "Carb-efficient",
+            "Micronutrient-dense",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -552,10 +1002,17 @@
             "carbs_g": 28,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["B vitamins", "Manganese"],
+            "key_micronutrients": [
+              "B vitamins",
+              "Manganese"
+            ],
             "fiber_g": 0.4
           },
-          "area_impacts": ["Carb-efficient", "Pre-run fuel", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Pre-run fuel",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -576,10 +1033,17 @@
             "carbs_g": 25,
             "fat_g": 1.1,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["B vitamins", "Iron"],
+            "key_micronutrients": [
+              "B vitamins",
+              "Iron"
+            ],
             "fiber_g": 1.8
           },
-          "area_impacts": ["Carb-efficient", "Pre-run fuel", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Pre-run fuel",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -600,10 +1064,19 @@
             "carbs_g": 20,
             "fat_g": 0.4,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Iron", "Folate", "Magnesium"],
+            "key_micronutrients": [
+              "Iron",
+              "Folate",
+              "Magnesium"
+            ],
             "fiber_g": 8
           },
-          "area_impacts": ["High protein", "Fiber bomb", "Iron-rich", "Low sat fat"],
+          "area_impacts": [
+            "High protein",
+            "Fiber bomb",
+            "Iron-rich",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -624,10 +1097,19 @@
             "carbs_g": 23,
             "fat_g": 0.5,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Iron", "Folate", "Potassium"],
+            "key_micronutrients": [
+              "Iron",
+              "Folate",
+              "Potassium"
+            ],
             "fiber_g": 6.4
           },
-          "area_impacts": ["High protein", "Fiber bomb", "Iron-rich", "Low sat fat"],
+          "area_impacts": [
+            "High protein",
+            "Fiber bomb",
+            "Iron-rich",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -648,10 +1130,19 @@
             "carbs_g": 4,
             "fat_g": 18.5,
             "saturated_fat_g": 1.7,
-            "key_micronutrients": ["Omega-3s", "Polyphenols", "Vitamin E"],
+            "key_micronutrients": [
+              "Omega-3s",
+              "Polyphenols",
+              "Vitamin E"
+            ],
             "fiber_g": 1.9
           },
-          "area_impacts": ["Anti-inflammatory", "HDL-elevating", "Heart-healthy", "Antioxidant-rich"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "HDL-elevating",
+            "Heart-healthy",
+            "Antioxidant-rich"
+          ],
           "is_low": false
         },
         {
@@ -672,10 +1163,18 @@
             "carbs_g": 5.1,
             "fat_g": 13,
             "saturated_fat_g": 2.5,
-            "key_micronutrients": ["Magnesium", "Iron", "Phosphorus"],
+            "key_micronutrients": [
+              "Magnesium",
+              "Iron",
+              "Phosphorus"
+            ],
             "fiber_g": 1.1
           },
-          "area_impacts": ["Micronutrient-dense", "Post-run recovery", "Iron-rich"],
+          "area_impacts": [
+            "Micronutrient-dense",
+            "Post-run recovery",
+            "Iron-rich"
+          ],
           "is_low": true
         },
         {
@@ -696,10 +1195,19 @@
             "carbs_g": 12,
             "fat_g": 8.7,
             "saturated_fat_g": 0.9,
-            "key_micronutrients": ["Omega-3s", "Calcium", "Manganese"],
+            "key_micronutrients": [
+              "Omega-3s",
+              "Calcium",
+              "Manganese"
+            ],
             "fiber_g": 9.8
           },
-          "area_impacts": ["Fiber bomb", "Anti-inflammatory", "Heart-healthy", "Gut-friendly"],
+          "area_impacts": [
+            "Fiber bomb",
+            "Anti-inflammatory",
+            "Heart-healthy",
+            "Gut-friendly"
+          ],
           "is_low": false
         },
         {
@@ -720,10 +1228,50 @@
             "carbs_g": 7,
             "fat_g": 16,
             "saturated_fat_g": 3,
-            "key_micronutrients": ["Vitamin E", "Magnesium", "Potassium"],
+            "key_micronutrients": [
+              "Vitamin E",
+              "Magnesium",
+              "Potassium"
+            ],
             "fiber_g": 1.5
           },
-          "area_impacts": ["High protein", "Post-run recovery", "Low sat fat"],
+          "area_impacts": [
+            "High protein",
+            "Post-run recovery",
+            "Low sat fat"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "pantry_almond_butter_kirkland_001",
+          "name": "Almond Butter",
+          "brand": "Kirkland Signature",
+          "quantity": 27,
+          "unit": "oz",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-03",
+          "storage_location": "pantry",
+          "notes": "Creamy, clean ingredient for snacking and cooking",
+          "nutrition": {
+            "serving_size": "2 tbsp",
+            "serving_size_unit": "tbsp",
+            "calories": 190,
+            "protein_g": 7,
+            "carbs_g": 6,
+            "fat_g": 17,
+            "saturated_fat_g": 1.3,
+            "key_micronutrients": [
+              "Vitamin E",
+              "Magnesium",
+              "Potassium"
+            ],
+            "fiber_g": 3.5
+          },
+          "area_impacts": [
+            "High protein",
+            "Post-run recovery",
+            "Anti-inflammatory"
+          ],
           "is_low": false
         }
       ]
@@ -749,10 +1297,17 @@
             "carbs_g": 10,
             "fat_g": 1.5,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["Lycopene", "Vitamin C"],
+            "key_micronutrients": [
+              "Lycopene",
+              "Vitamin C"
+            ],
             "fiber_g": 2
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat", "Antioxidant-rich"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat",
+            "Antioxidant-rich"
+          ],
           "is_low": false
         },
         {
@@ -773,10 +1328,16 @@
             "carbs_g": 3.5,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Ginger", "Garlic"],
+            "key_micronutrients": [
+              "Ginger",
+              "Garlic"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Anti-inflammatory"],
+          "area_impacts": [
+            "Low sat fat",
+            "Anti-inflammatory"
+          ],
           "is_low": false
         },
         {
@@ -797,10 +1358,15 @@
             "carbs_g": 1,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Capsaicin"],
+            "key_micronutrients": [
+              "Capsaicin"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -821,10 +1387,15 @@
             "carbs_g": 2,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Vitamin C"],
+            "key_micronutrients": [
+              "Vitamin C"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -845,10 +1416,15 @@
             "carbs_g": 0,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Capsaicin"],
+            "key_micronutrients": [
+              "Capsaicin"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": true
         },
         {
@@ -869,10 +1445,16 @@
             "carbs_g": 1,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Garlic", "Capsaicin"],
+            "key_micronutrients": [
+              "Garlic",
+              "Capsaicin"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -893,10 +1475,15 @@
             "carbs_g": 2,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Lycopene"],
+            "key_micronutrients": [
+              "Lycopene"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Carb-efficient"],
+          "area_impacts": [
+            "Low sat fat",
+            "Carb-efficient"
+          ],
           "is_low": false
         },
         {
@@ -917,10 +1504,14 @@
             "carbs_g": 1,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Sodium"],
+            "key_micronutrients": [
+              "Sodium"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat"],
+          "area_impacts": [
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -941,10 +1532,15 @@
             "carbs_g": 1,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Amino acids"],
+            "key_micronutrients": [
+              "Amino acids"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Anti-inflammatory"],
+          "area_impacts": [
+            "Low sat fat",
+            "Anti-inflammatory"
+          ],
           "is_low": false
         },
         {
@@ -965,10 +1561,16 @@
             "carbs_g": 2,
             "fat_g": 16,
             "saturated_fat_g": 2,
-            "key_micronutrients": ["Omega-3s"],
+            "key_micronutrients": [
+              "Omega-3s"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat", "Heart-healthy"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat",
+            "Heart-healthy"
+          ],
           "is_low": false
         },
         {
@@ -989,10 +1591,15 @@
             "carbs_g": 15,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Honey"],
+            "key_micronutrients": [
+              "Honey"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Occasional treat"],
+          "area_impacts": [
+            "Low sat fat",
+            "Occasional treat"
+          ],
           "is_low": false
         },
         {
@@ -1013,10 +1620,16 @@
             "carbs_g": 6,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Lycopene", "Potassium"],
+            "key_micronutrients": [
+              "Lycopene",
+              "Potassium"
+            ],
             "fiber_g": 1.3
           },
-          "area_impacts": ["Antioxidant-rich", "Low sat fat"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1037,10 +1650,15 @@
             "carbs_g": 6,
             "fat_g": 0.5,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Lycopene"],
+            "key_micronutrients": [
+              "Lycopene"
+            ],
             "fiber_g": 1
           },
-          "area_impacts": ["Low sat fat", "Antioxidant-rich"],
+          "area_impacts": [
+            "Low sat fat",
+            "Antioxidant-rich"
+          ],
           "is_low": false
         },
         {
@@ -1061,10 +1679,16 @@
             "carbs_g": 2,
             "fat_g": 0.3,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Capsaicin", "Vitamin C"],
+            "key_micronutrients": [
+              "Capsaicin",
+              "Vitamin C"
+            ],
             "fiber_g": 0.3
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1088,7 +1712,9 @@
             "key_micronutrients": [],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat"],
+          "area_impacts": [
+            "Low sat fat"
+          ],
           "is_low": false
         }
       ]
@@ -1114,10 +1740,16 @@
             "carbs_g": 0,
             "fat_g": 14,
             "saturated_fat_g": 1,
-            "key_micronutrients": ["Vitamin E"],
+            "key_micronutrients": [
+              "Vitamin E"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Anti-inflammatory", "Heart-healthy"],
+          "area_impacts": [
+            "Low sat fat",
+            "Anti-inflammatory",
+            "Heart-healthy"
+          ],
           "is_low": false
         },
         {
@@ -1138,10 +1770,15 @@
             "carbs_g": 0,
             "fat_g": 4.5,
             "saturated_fat_g": 0.7,
-            "key_micronutrients": ["Sesame lignans"],
+            "key_micronutrients": [
+              "Sesame lignans"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Low sat fat"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1165,7 +1802,10 @@
             "key_micronutrients": [],
             "fiber_g": 0
           },
-          "area_impacts": ["Moderation needed", "High sat fat"],
+          "area_impacts": [
+            "Moderation needed",
+            "High sat fat"
+          ],
           "is_low": false
         }
       ]
@@ -1191,10 +1831,17 @@
             "carbs_g": 16,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Antioxidants", "Enzymes"],
+            "key_micronutrients": [
+              "Antioxidants",
+              "Enzymes"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Antioxidant-rich", "Low sat fat", "Natural sweetener"],
+          "area_impacts": [
+            "Antioxidant-rich",
+            "Low sat fat",
+            "Natural sweetener"
+          ],
           "is_low": false
         },
         {
@@ -1215,10 +1862,16 @@
             "carbs_g": 13.4,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Manganese", "Polyphenols"],
+            "key_micronutrients": [
+              "Manganese",
+              "Polyphenols"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Antioxidant-rich"],
+          "area_impacts": [
+            "Low sat fat",
+            "Antioxidant-rich"
+          ],
           "is_low": false
         }
       ]
@@ -1244,10 +1897,17 @@
             "carbs_g": 19,
             "fat_g": 5,
             "saturated_fat_g": 0.5,
-            "key_micronutrients": ["Fiber", "Antioxidants"],
+            "key_micronutrients": [
+              "Fiber",
+              "Antioxidants"
+            ],
             "fiber_g": 3
           },
-          "area_impacts": ["Carb-efficient", "Fiber bomb", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Fiber bomb",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1271,7 +1931,11 @@
             "key_micronutrients": [],
             "fiber_g": 2
           },
-          "area_impacts": ["Carb-efficient", "Fiber bomb", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Fiber bomb",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1292,10 +1956,16 @@
             "carbs_g": 10,
             "fat_g": 6,
             "saturated_fat_g": 1,
-            "key_micronutrients": ["Nutrients from almond flour"],
+            "key_micronutrients": [
+              "Nutrients from almond flour"
+            ],
             "fiber_g": 2
           },
-          "area_impacts": ["Carb-efficient", "Low sat fat", "Grain-free"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Low sat fat",
+            "Grain-free"
+          ],
           "is_low": false
         },
         {
@@ -1319,7 +1989,10 @@
             "key_micronutrients": [],
             "fiber_g": 1
           },
-          "area_impacts": ["Carb-efficient", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Low sat fat"
+          ],
           "is_low": false
         },
         {
@@ -1343,7 +2016,11 @@
             "key_micronutrients": [],
             "fiber_g": 1
           },
-          "area_impacts": ["Moderation needed", "High sat fat", "Occasional treat"],
+          "area_impacts": [
+            "Moderation needed",
+            "High sat fat",
+            "Occasional treat"
+          ],
           "is_low": false
         },
         {
@@ -1364,10 +2041,18 @@
             "carbs_g": 18,
             "fat_g": 0.1,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Potassium", "Magnesium", "Copper"],
+            "key_micronutrients": [
+              "Potassium",
+              "Magnesium",
+              "Copper"
+            ],
             "fiber_g": 1.6
           },
-          "area_impacts": ["Post-run recovery", "Carb-efficient", "Micronutrient-dense"],
+          "area_impacts": [
+            "Post-run recovery",
+            "Carb-efficient",
+            "Micronutrient-dense"
+          ],
           "is_low": false
         },
         {
@@ -1388,10 +2073,47 @@
             "carbs_g": 37,
             "fat_g": 1.5,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["B vitamins", "Iron"],
+            "key_micronutrients": [
+              "B vitamins",
+              "Iron"
+            ],
             "fiber_g": 1.5
           },
-          "area_impacts": ["Carb-efficient", "Pre-run fuel", "Low sat fat"],
+          "area_impacts": [
+            "Carb-efficient",
+            "Pre-run fuel",
+            "Low sat fat"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "snack_rice_cakes_drizzilicious_001",
+          "name": "Mini Rice Cake Bites Variety Pack",
+          "brand": "Drizzilicious",
+          "quantity": 32,
+          "unit": "pack",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-09-04",
+          "storage_location": "pantry",
+          "notes": "Variety pack, convenient snack",
+          "nutrition": {
+            "serving_size": "1 piece",
+            "serving_size_unit": "count",
+            "calories": 35,
+            "protein_g": 0.5,
+            "carbs_g": 7,
+            "fat_g": 0.5,
+            "saturated_fat_g": 0,
+            "key_micronutrients": [
+              "Whole grains"
+            ],
+            "fiber_g": 0.3
+          },
+          "area_impacts": [
+            "Low calorie",
+            "Carb-efficient",
+            "Convenient snack"
+          ],
           "is_low": false
         }
       ]
@@ -1417,10 +2139,19 @@
             "carbs_g": 7,
             "fat_g": 10,
             "saturated_fat_g": 7,
-            "key_micronutrients": ["Probiotics", "Calcium", "B12"],
+            "key_micronutrients": [
+              "Probiotics",
+              "Calcium",
+              "B12"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["High protein", "Probiotic-rich", "Post-run recovery", "Gut-friendly"],
+          "area_impacts": [
+            "High protein",
+            "Probiotic-rich",
+            "Post-run recovery",
+            "Gut-friendly"
+          ],
           "is_low": false
         },
         {
@@ -1441,10 +2172,50 @@
             "carbs_g": 1,
             "fat_g": 2.5,
             "saturated_fat_g": 0.2,
-            "key_micronutrients": ["Calcium", "Vitamin E"],
+            "key_micronutrients": [
+              "Calcium",
+              "Vitamin E"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Low calorie", "Plant-based"],
+          "area_impacts": [
+            "Low sat fat",
+            "Low calorie",
+            "Plant-based"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "dairy_yogurt_kirkland_002",
+          "name": "Nonfat Plain Greek Yogurt",
+          "brand": "Kirkland Signature",
+          "quantity": 48,
+          "unit": "oz",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-05-28",
+          "storage_location": "fridge",
+          "notes": "1 x 48oz container, high protein",
+          "nutrition": {
+            "serving_size": "170g",
+            "serving_size_unit": "grams",
+            "calories": 100,
+            "protein_g": 18,
+            "carbs_g": 7,
+            "fat_g": 0,
+            "saturated_fat_g": 0,
+            "key_micronutrients": [
+              "Probiotics",
+              "Calcium",
+              "B12"
+            ],
+            "fiber_g": 0
+          },
+          "area_impacts": [
+            "High protein",
+            "Probiotic-rich",
+            "Post-run recovery",
+            "Low sat fat"
+          ],
           "is_low": false
         }
       ]
@@ -1470,10 +2241,15 @@
             "carbs_g": 0,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Sodium", "Trace minerals"],
+            "key_micronutrients": [
+              "Sodium",
+              "Trace minerals"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Electrolyte balance"],
+          "area_impacts": [
+            "Electrolyte balance"
+          ],
           "is_low": false
         },
         {
@@ -1494,10 +2270,15 @@
             "carbs_g": 1,
             "fat_g": 0.1,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Piperine"],
+            "key_micronutrients": [
+              "Piperine"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Anti-inflammatory", "Bioavailability enhancer"],
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Bioavailability enhancer"
+          ],
           "is_low": false
         },
         {
@@ -1518,10 +2299,15 @@
             "carbs_g": 0.3,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Herbs"],
+            "key_micronutrients": [
+              "Herbs"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Low sat fat", "Low sodium"],
+          "area_impacts": [
+            "Low sat fat",
+            "Low sodium"
+          ],
           "is_low": false
         }
       ]
@@ -1547,10 +2333,15 @@
             "carbs_g": 0,
             "fat_g": 0,
             "saturated_fat_g": 0,
-            "key_micronutrients": ["Minerals"],
+            "key_micronutrients": [
+              "Minerals"
+            ],
             "fiber_g": 0
           },
-          "area_impacts": ["Hydration", "Zero calorie"],
+          "area_impacts": [
+            "Hydration",
+            "Zero calorie"
+          ],
           "is_low": false
         }
       ]
@@ -1559,27 +2350,140 @@
       "display_name": "Tortillas & Wraps",
       "items": [
         {
-          "id": "tortilla_001",
-          "name": "Tortillas",
-          "brand": "El Milagro",
-          "quantity": 1,
+          "id": "tortilla_mission_carb_balance_001",
+          "name": "Carb Balance Flour Tortillas",
+          "brand": "Mission",
+          "quantity": 2,
           "unit": "pack",
-          "date_added": "2026-04-28",
-          "expiration_date": "2026-05-10",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
           "storage_location": "fridge",
-          "notes": "30-pack, IF-friendly lunch option",
+          "notes": "8-count per pack, low-carb IF-friendly",
           "nutrition": {
             "serving_size": "1 tortilla",
             "serving_size_unit": "count",
-            "calories": 140,
-            "protein_g": 3,
-            "carbs_g": 25,
+            "calories": 80,
+            "protein_g": 4,
+            "carbs_g": 14,
             "fat_g": 2.5,
             "saturated_fat_g": 0.5,
-            "key_micronutrients": ["B vitamins"],
-            "fiber_g": 1.5
+            "key_micronutrients": [
+              "Fiber",
+              "B vitamins"
+            ],
+            "fiber_g": 9
           },
-          "area_impacts": ["Carb-efficient", "Low sat fat", "IF-friendly"],
+          "area_impacts": [
+            "Carb-efficient",
+            "High fiber",
+            "Low sat fat",
+            "IF-friendly"
+          ],
+          "is_low": false
+        }
+      ]
+    },
+    "frozen": {
+      "display_name": "Frozen",
+      "items": [
+        {
+          "id": "frozen_cauliflower_pizza_001",
+          "name": "Cauliflower Crust Pizza, Supreme",
+          "brand": "Kirkland Signature",
+          "quantity": 2,
+          "unit": "count",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Ready to cook, low-carb option",
+          "nutrition": {
+            "serving_size": "1/2 pizza",
+            "serving_size_unit": "count",
+            "calories": 250,
+            "protein_g": 12,
+            "carbs_g": 20,
+            "fat_g": 12,
+            "saturated_fat_g": 5,
+            "key_micronutrients": [
+              "Calcium",
+              "Iron"
+            ],
+            "fiber_g": 2
+          },
+          "area_impacts": [
+            "Low carb",
+            "Convenient",
+            "Post-run fuel"
+          ],
+          "is_low": false
+        },
+        {
+          "id": "frozen_wontons_001",
+          "name": "Chicken & Cilantro Fully Cooked Mini Wontons",
+          "brand": "Kirkland Signature",
+          "quantity": 48,
+          "unit": "oz",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-11-07",
+          "storage_location": "freezer",
+          "notes": "Ready to reheat, convenient protein + carbs",
+          "nutrition": {
+            "serving_size": "100g",
+            "serving_size_unit": "grams",
+            "calories": 160,
+            "protein_g": 10,
+            "carbs_g": 18,
+            "fat_g": 4,
+            "saturated_fat_g": 1,
+            "key_micronutrients": [
+              "B vitamins",
+              "Iron"
+            ],
+            "fiber_g": 0.5
+          },
+          "area_impacts": [
+            "High protein",
+            "Carb-efficient",
+            "Convenient"
+          ],
+          "is_low": false
+        }
+      ]
+    },
+    "dips": {
+      "display_name": "Dips & Spreads",
+      "items": [
+        {
+          "id": "dip_guacamole_001",
+          "name": "Chunky Guacamole, Organic",
+          "brand": "Kirkland Signature",
+          "quantity": 16,
+          "unit": "count",
+          "date_added": "2026-05-07",
+          "expiration_date": "2026-06-07",
+          "storage_location": "fridge",
+          "notes": "2.5 oz individual packs, convenient healthy fat",
+          "nutrition": {
+            "serving_size": "1 pack (2.5 oz)",
+            "serving_size_unit": "count",
+            "calories": 90,
+            "protein_g": 1,
+            "carbs_g": 5,
+            "fat_g": 8,
+            "saturated_fat_g": 1.2,
+            "key_micronutrients": [
+              "Potassium",
+              "Folate",
+              "Vitamin K"
+            ],
+            "fiber_g": 3
+          },
+          "area_impacts": [
+            "Anti-inflammatory",
+            "Low sat fat",
+            "Heart-healthy",
+            "Fiber bomb"
+          ],
           "is_low": false
         }
       ]
