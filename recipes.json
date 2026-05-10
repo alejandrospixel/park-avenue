@@ -1,0 +1,1333 @@
+{
+  "metadata": {
+    "generated_date": "2026-05-07",
+    "total_recipes": 75,
+    "difficulty_breakdown": {
+      "easy": 30,
+      "medium": 30,
+      "complex": 15
+    }
+  },
+  "recipes": [
+    {
+      "id": "recipe_easy_001",
+      "name": "Greek Yogurt Granola Bowl",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Nonfat Greek Yogurt", "quantity": 200, "unit": "g", "substitutes": ["Organic Greek Yogurt"]},
+        {"name": "Blueberries", "quantity": 150, "unit": "g", "substitutes": ["Blackberries", "Raspberries"]},
+        {"name": "Granola", "quantity": 50, "unit": "g", "substitutes": ["Muesli"]},
+        {"name": "Raw Honey", "quantity": 1, "unit": "tbsp", "substitutes": ["Maple Syrup"]}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 18, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 4, "calories": 285},
+      "health_impacts": ["high-protein", "fiber-rich", "gut-friendly"],
+      "training_context": "post-run-recovery",
+      "instructions": "Layer yogurt, granola, and berries. Drizzle honey on top. Eat immediately."
+    },
+    {
+      "id": "recipe_easy_002",
+      "name": "Scrambled Eggs with Toast",
+      "difficulty": "Easy",
+      "prep_time_min": 10,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Whole Grain Bread", "quantity": 2, "unit": "slice", "substitutes": ["Sourdough"]},
+        {"name": "Unsalted Butter", "quantity": 1, "unit": "tsp", "substitutes": ["Avocado Oil"]},
+        {"name": "Sea Salt", "quantity": 0.25, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 32, "protein_g": 15, "fat_g": 10, "saturated_fat_g": 3, "fiber_g": 4, "calories": 270},
+      "health_impacts": ["high-protein", "pre-run-fuel"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Melt butter in skillet. Scramble eggs with salt. Toast bread. Serve warm."
+    },
+    {
+      "id": "recipe_easy_003",
+      "name": "Banana Almond Butter Smoothie",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Bananas", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Almond Butter", "quantity": 2, "unit": "tbsp", "substitutes": ["Peanut Butter"]},
+        {"name": "Unsweetened Almond Milk", "quantity": 1, "unit": "cup", "substitutes": ["Cow's Milk"]},
+        {"name": "Organic Chia Seeds", "quantity": 1, "unit": "tbsp", "substitutes": ["Flax Seeds"]}
+      ],
+      "nutrition": {"carbs_g": 42, "protein_g": 10, "fat_g": 14, "saturated_fat_g": 1, "fiber_g": 5, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "anti-inflammatory"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Blend banana, almond butter, milk, and chia seeds until smooth. Drink immediately."
+    },
+    {
+      "id": "recipe_easy_004",
+      "name": "Spinach and Egg Omelet",
+      "difficulty": "Easy",
+      "prep_time_min": 12,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 3, "unit": "count", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": ["Arugula"]},
+        {"name": "Unsalted Butter", "quantity": 1, "unit": "tsp", "substitutes": ["Avocado Oil"]},
+        {"name": "Sea Salt", "quantity": 0.25, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 3, "protein_g": 18, "fat_g": 12, "saturated_fat_g": 4, "fiber_g": 1, "calories": 210},
+      "health_impacts": ["high-protein", "vo2-support", "anti-inflammatory"],
+      "training_context": "easy-day",
+      "instructions": "Heat butter in skillet. Pour beaten eggs, add spinach mid-cook. Fold omelet in half when set."
+    },
+    {
+      "id": "recipe_easy_005",
+      "name": "Quinoa Power Breakfast",
+      "difficulty": "Easy",
+      "prep_time_min": 15,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Quinoa", "quantity": 0.5, "unit": "cup", "substitutes": ["Brown Rice"]},
+        {"name": "Organic Chia Seeds", "quantity": 2, "unit": "tbsp", "substitutes": []},
+        {"name": "Blueberries", "quantity": 100, "unit": "g", "substitutes": ["Raspberries"]},
+        {"name": "Organic Golden Maple Syrup", "quantity": 1, "unit": "tbsp", "substitutes": ["Honey"]}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 10, "fat_g": 6, "saturated_fat_g": 0.5, "fiber_g": 6, "calories": 310},
+      "health_impacts": ["high-protein", "carb-efficient", "fiber-rich"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook quinoa according to package. Top with chia seeds, berries, and syrup. Serve warm or cold."
+    },
+    {
+      "id": "recipe_easy_006",
+      "name": "Chicken Sausage and Sweet Potato Hash",
+      "difficulty": "Easy",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Fully Cooked Chicken Sausage Links", "quantity": 3, "unit": "links", "substitutes": []},
+        {"name": "Sweet Potatoes", "quantity": 1, "unit": "medium", "substitutes": ["Regular Potatoes"]},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "100% Pure Organic Avocado Oil", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 35, "protein_g": 20, "fat_g": 8, "saturated_fat_g": 1.5, "fiber_g": 5, "calories": 310},
+      "health_impacts": ["high-protein", "carb-efficient", "post-run-recovery"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cube sweet potatoes, sauté in avocado oil until crispy. Slice sausages, add to pan. Wilt spinach at end."
+    },
+    {
+      "id": "recipe_easy_007",
+      "name": "Berry Overnight Oats",
+      "difficulty": "Easy",
+      "prep_time_min": 10,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Gluten-Free Organic Rolled Oats", "quantity": 0.5, "unit": "cup", "substitutes": ["Regular Oats"]},
+        {"name": "Unsweetened Almond Milk", "quantity": 1, "unit": "cup", "substitutes": ["Cow's Milk"]},
+        {"name": "Raspberries", "quantity": 100, "unit": "g", "substitutes": ["Blackberries"]},
+        {"name": "Raw Honey", "quantity": 1, "unit": "tbsp", "substitutes": ["Maple Syrup"]}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 8, "fat_g": 3, "saturated_fat_g": 0.3, "fiber_g": 6, "calories": 260},
+      "health_impacts": ["carb-efficient", "fiber-rich", "gut-friendly"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Mix oats and milk in jar. Refrigerate overnight. Top with raspberries and honey in the morning."
+    },
+    {
+      "id": "recipe_easy_008",
+      "name": "Chickpea Salad",
+      "difficulty": "Easy",
+      "prep_time_min": 8,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": ["Mixed Greens"]},
+        {"name": "Chickpeas (Canned)", "quantity": 0.75, "unit": "cup", "substitutes": ["White Beans"]},
+        {"name": "Carrots", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Avocado Lime Dressing", "quantity": 2, "unit": "tbsp", "substitutes": ["Olive Oil + Lemon"]}
+      ],
+      "nutrition": {"carbs_g": 32, "protein_g": 12, "fat_g": 10, "saturated_fat_g": 1.5, "fiber_g": 8, "calories": 280},
+      "health_impacts": ["high-protein", "fiber-rich", "anti-inflammatory"],
+      "training_context": "easy-day",
+      "instructions": "Chop spinach and carrots. Top with chickpeas. Drizzle with dressing. Toss and serve."
+    },
+    {
+      "id": "recipe_easy_009",
+      "name": "Cottage Cheese Fruit Plate",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Greek Yogurt", "quantity": 150, "unit": "g", "substitutes": ["Cottage Cheese"]},
+        {"name": "Blueberries", "quantity": 100, "unit": "g", "substitutes": ["Strawberries"]},
+        {"name": "Walnuts", "quantity": 23, "unit": "g", "substitutes": ["Almonds"]},
+        {"name": "Raw Honey", "quantity": 0.5, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 28, "protein_g": 16, "fat_g": 10, "saturated_fat_g": 1.5, "fiber_g": 3, "calories": 260},
+      "health_impacts": ["high-protein", "hdl-elevating", "antioxidant-rich"],
+      "training_context": "post-run-recovery",
+      "instructions": "Scoop yogurt into bowl. Top with berries, walnuts, and honey. Serve chilled."
+    },
+    {
+      "id": "recipe_easy_010",
+      "name": "Rice and Bean Bowl",
+      "difficulty": "Easy",
+      "prep_time_min": 20,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Thai Jasmine Rice", "quantity": 0.75, "unit": "cup", "substitutes": ["Brown Rice"]},
+        {"name": "Organic Red Kidney Beans", "quantity": 0.75, "unit": "cup", "substitutes": ["Black Beans"]},
+        {"name": "Sriracha", "quantity": 1, "unit": "tsp", "substitutes": ["Hot Sauce"]},
+        {"name": "Lime", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 68, "protein_g": 11, "fat_g": 1.5, "saturated_fat_g": 0.2, "fiber_g": 7, "calories": 330},
+      "health_impacts": ["carb-efficient", "high-protein", "fiber-rich"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook rice. Warm beans with sriracha. Combine and squeeze fresh lime juice. Serve warm."
+    },
+    {
+      "id": "recipe_easy_011",
+      "name": "Avocado Toast with Egg",
+      "difficulty": "Easy",
+      "prep_time_min": 12,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Whole Grain Bread", "quantity": 2, "unit": "slice", "substitutes": ["Sourdough"]},
+        {"name": "Avocado Hass Variety", "quantity": 0.5, "unit": "count", "substitutes": []},
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Sea Salt", "quantity": 0.25, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 14, "fat_g": 12, "saturated_fat_g": 2.5, "fiber_g": 5, "calories": 340},
+      "health_impacts": ["hdl-elevating", "anti-inflammatory", "carb-efficient"],
+      "training_context": "easy-day",
+      "instructions": "Toast bread. Mash avocado on toast with salt. Fry egg, top avocado toast. Serve hot."
+    },
+    {
+      "id": "recipe_easy_012",
+      "name": "Lentil Soup (Quick)",
+      "difficulty": "Easy",
+      "prep_time_min": 25,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Black Lentils", "quantity": 1, "unit": "cup", "substitutes": ["Red Lentils"]},
+        {"name": "Chicken Bone Broth", "quantity": 4, "unit": "cups", "substitutes": ["Vegetable Broth"]},
+        {"name": "Carrots", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Red Onions", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 42, "protein_g": 14, "fat_g": 1.5, "saturated_fat_g": 0.2, "fiber_g": 8, "calories": 270},
+      "health_impacts": ["high-protein", "fiber-rich", "vo2-support", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Boil broth, add lentils. Dice and add carrots and onions. Simmer 20 minutes. Season to taste."
+    },
+    {
+      "id": "recipe_easy_013",
+      "name": "Peanut Butter Banana Toast",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Whole Grain Bread", "quantity": 1, "unit": "slice", "substitutes": []},
+        {"name": "Unsweetened Creamy Peanut Butter", "quantity": 2, "unit": "tbsp", "substitutes": ["Almond Butter"]},
+        {"name": "Bananas", "quantity": 0.5, "unit": "medium", "substitutes": []},
+        {"name": "Raw Honey", "quantity": 0.5, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 9, "fat_g": 12, "saturated_fat_g": 2, "fiber_g": 4, "calories": 310},
+      "health_impacts": ["carb-efficient", "pre-run-fuel", "post-run-recovery"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Toast bread. Spread peanut butter. Top with banana slices. Drizzle honey."
+    },
+    {
+      "id": "recipe_easy_014",
+      "name": "Chicken Breast with Roasted Broccoli",
+      "difficulty": "Easy",
+      "prep_time_min": 25,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Breasts", "quantity": 150, "unit": "g", "substitutes": []},
+        {"name": "Organic Broccoli Florets", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "100% Pure Organic Avocado Oil", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Sea Salt", "quantity": 0.25, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 8, "protein_g": 35, "fat_g": 7, "saturated_fat_g": 1, "fiber_g": 2, "calories": 240},
+      "health_impacts": ["high-protein", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Season and bake chicken at 400°F for 20 min. Toss broccoli with oil and salt, roast alongside."
+    },
+    {
+      "id": "recipe_easy_015",
+      "name": "Veggie and Bean Wrap",
+      "difficulty": "Easy",
+      "prep_time_min": 10,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Carb Balance Flour Tortillas", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Organic Red Kidney Beans", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Avocado Hass Variety", "quantity": 0.25, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 28, "protein_g": 12, "fat_g": 6, "saturated_fat_g": 0.8, "fiber_g": 8, "calories": 220},
+      "health_impacts": ["fiber-rich", "high-protein", "ldl-lowering"],
+      "training_context": "easy-day",
+      "instructions": "Warm tortilla. Layer beans, spinach, avocado. Roll tightly. Slice in half and serve."
+    },
+    {
+      "id": "recipe_easy_016",
+      "name": "Oatmeal with Walnuts",
+      "difficulty": "Easy",
+      "prep_time_min": 8,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Gluten-Free Organic Rolled Oats", "quantity": 0.5, "unit": "cup", "substitutes": []},
+        {"name": "Unsweetened Almond Milk", "quantity": 1.5, "unit": "cups", "substitutes": ["Cow's Milk"]},
+        {"name": "Walnut Halves", "quantity": 28, "unit": "g", "substitutes": ["Almonds"]},
+        {"name": "Organic Golden Maple Syrup", "quantity": 1, "unit": "tbsp", "substitutes": ["Honey"]}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 10, "fat_g": 12, "saturated_fat_g": 1.2, "fiber_g": 6, "calories": 390},
+      "health_impacts": ["hdl-elevating", "fiber-rich", "anti-inflammatory"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Boil milk, add oats. Cook 5 min. Top with walnuts and syrup. Serve hot."
+    },
+    {
+      "id": "recipe_easy_017",
+      "name": "Grilled Chicken with Sweet Potato",
+      "difficulty": "Easy",
+      "prep_time_min": 25,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Breasts", "quantity": 150, "unit": "g", "substitutes": []},
+        {"name": "Sweet Potatoes", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Sriracha", "quantity": 0.5, "unit": "tsp", "substitutes": []},
+        {"name": "Lime", "quantity": 0.25, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 32, "fat_g": 2, "saturated_fat_g": 0.4, "fiber_g": 4, "calories": 310},
+      "health_impacts": ["high-protein", "carb-efficient", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Bake chicken and sweet potato at 400°F for 20 min. Top chicken with sriracha and lime."
+    },
+    {
+      "id": "recipe_easy_018",
+      "name": "Chia Seed Pudding",
+      "difficulty": "Easy",
+      "prep_time_min": 10,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Chia Seeds", "quantity": 3, "unit": "tbsp", "substitutes": ["Flax Seeds"]},
+        {"name": "Unsweetened Almond Milk", "quantity": 1, "unit": "cup", "substitutes": ["Cow's Milk"]},
+        {"name": "Blueberries", "quantity": 100, "unit": "g", "substitutes": ["Raspberries"]},
+        {"name": "Raw Honey", "quantity": 1, "unit": "tbsp", "substitutes": ["Maple Syrup"]}
+      ],
+      "nutrition": {"carbs_g": 35, "protein_g": 6, "fat_g": 12, "saturated_fat_g": 1, "fiber_g": 9, "calories": 280},
+      "health_impacts": ["fiber-rich", "anti-inflammatory", "gut-friendly"],
+      "training_context": "post-run-recovery",
+      "instructions": "Mix chia seeds, milk, honey in jar. Refrigerate 2 hours. Top with berries before eating."
+    },
+    {
+      "id": "recipe_easy_019",
+      "name": "Turkey Meatballs with Marinara",
+      "difficulty": "Easy",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 200, "unit": "g", "substitutes": ["Ground Chicken"]},
+        {"name": "Organic Tuscan Marinara", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Quinoa", "quantity": 0.5, "unit": "cup", "substitutes": ["Brown Rice"]},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 32, "protein_g": 28, "fat_g": 5, "saturated_fat_g": 1, "fiber_g": 4, "calories": 310},
+      "health_impacts": ["high-protein", "carb-efficient", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Form ground turkey into balls. Bake at 400°F for 15 min. Heat marinara, add meatballs. Serve over cooked quinoa."
+    },
+    {
+      "id": "recipe_easy_020",
+      "name": "Blackberry Smoothie Bowl",
+      "difficulty": "Easy",
+      "prep_time_min": 8,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Greek Yogurt", "quantity": 150, "unit": "g", "substitutes": []},
+        {"name": "Blackberries", "quantity": 150, "unit": "g", "substitutes": ["Blueberries"]},
+        {"name": "Gluten-Free Organic Rolled Oats", "quantity": 0.25, "unit": "cup", "substitutes": []},
+        {"name": "Raw Honey", "quantity": 0.5, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 42, "protein_g": 16, "fat_g": 3, "saturated_fat_g": 0.5, "fiber_g": 6, "calories": 280},
+      "health_impacts": ["high-protein", "antioxidant-rich", "fiber-rich"],
+      "training_context": "post-run-recovery",
+      "instructions": "Blend yogurt and blackberries until thick. Pour into bowl. Top with oats and honey."
+    },
+    {
+      "id": "recipe_easy_021",
+      "name": "Beef and Broccoli Stir-Fry (Quick)",
+      "difficulty": "Easy",
+      "prep_time_min": 18,
+      "servings": 1,
+      "ingredients": [
+        {"name": "USDA Choice Beef Flank Steak", "quantity": 150, "unit": "g", "substitutes": []},
+        {"name": "Organic Broccoli Florets", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Organic Coconut Aminos Seasoning Sauce", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Organic Toasted Sesame Oil", "quantity": 0.5, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 10, "protein_g": 32, "fat_g": 8, "saturated_fat_g": 1.5, "fiber_g": 2, "calories": 260},
+      "health_impacts": ["high-protein", "vo2-support"],
+      "training_context": "easy-day",
+      "instructions": "Slice steak thin. Heat sesame oil in wok. Stir-fry beef 2 min, add broccoli 3 min. Toss with coconut aminos."
+    },
+    {
+      "id": "recipe_easy_022",
+      "name": "Chickpea Buddha Bowl",
+      "difficulty": "Easy",
+      "prep_time_min": 10,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Chickpeas (Canned)", "quantity": 1.5, "unit": "cups", "substitutes": ["White Beans"]},
+        {"name": "Red Onions", "quantity": 0.25, "unit": "count", "substitutes": []},
+        {"name": "Carrots", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Avocado Lime Dressing", "quantity": 3, "unit": "tbsp", "substitutes": ["Olive Oil + Lime"]}
+      ],
+      "nutrition": {"carbs_g": 36, "protein_g": 10, "fat_g": 10, "saturated_fat_g": 1.5, "fiber_g": 8, "calories": 280},
+      "health_impacts": ["fiber-rich", "high-protein", "ldl-lowering"],
+      "training_context": "easy-day",
+      "instructions": "Dice all vegetables. Toss with chickpeas and dressing. Serve chilled or room temperature."
+    },
+    {
+      "id": "recipe_easy_023",
+      "name": "Veggie Wrap with Chickpeas",
+      "difficulty": "Easy",
+      "prep_time_min": 8,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Carb Balance Flour Tortillas", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Chickpeas (Canned)", "quantity": 0.5, "unit": "cup", "substitutes": []},
+        {"name": "Carrots", "quantity": 0.5, "unit": "medium", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 26, "protein_g": 11, "fat_g": 2.5, "saturated_fat_g": 0.3, "fiber_g": 7, "calories": 200},
+      "health_impacts": ["fiber-rich", "high-protein"],
+      "training_context": "easy-day",
+      "instructions": "Warm tortilla. Layer spinach, chickpeas, shredded carrots. Roll tightly and serve."
+    },
+    {
+      "id": "recipe_easy_024",
+      "name": "Baked Sweet Potato with Almonds",
+      "difficulty": "Easy",
+      "prep_time_min": 30,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Sweet Potatoes", "quantity": 1, "unit": "large", "substitutes": []},
+        {"name": "Sliced Almonds", "quantity": 28, "unit": "g", "substitutes": ["Walnuts"]},
+        {"name": "Organic Chia Seeds", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Raw Honey", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 45, "protein_g": 7, "fat_g": 9, "saturated_fat_g": 0.8, "fiber_g": 5, "calories": 290},
+      "health_impacts": ["carb-efficient", "fiber-rich", "hdl-elevating"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Bake sweet potato at 400°F for 25 min. Top with almonds, chia seeds, honey. Serve warm."
+    },
+    {
+      "id": "recipe_easy_025",
+      "name": "Veggie Omelet with Toast",
+      "difficulty": "Easy",
+      "prep_time_min": 12,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 3, "unit": "count", "substitutes": []},
+        {"name": "Red Onions", "quantity": 0.25, "unit": "count", "substitutes": []},
+        {"name": "Whole Grain Bread", "quantity": 1, "unit": "slice", "substitutes": []},
+        {"name": "Unsalted Butter", "quantity": 1, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 26, "protein_g": 16, "fat_g": 11, "saturated_fat_g": 3.5, "fiber_g": 4, "calories": 280},
+      "health_impacts": ["high-protein", "carb-efficient"],
+      "training_context": "post-run-recovery",
+      "instructions": "Dice onion. Beat eggs with butter in skillet. Add onion, fold omelet. Toast bread on the side."
+    },
+    {
+      "id": "recipe_easy_026",
+      "name": "Lentil and Carrot Soup",
+      "difficulty": "Easy",
+      "prep_time_min": 25,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Black Lentils", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Chicken Bone Broth", "quantity": 4, "unit": "cups", "substitutes": []},
+        {"name": "Red Onions", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 40, "protein_g": 14, "fat_g": 1.2, "saturated_fat_g": 0.2, "fiber_g": 8, "calories": 260},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Boil broth, add lentils and diced vegetables. Simmer 20 min until tender. Season to taste."
+    },
+    {
+      "id": "recipe_easy_027",
+      "name": "Roasted Chicken Thighs with Asparagus",
+      "difficulty": "Easy",
+      "prep_time_min": 25,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Thighs", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Asparagus", "quantity": 200, "unit": "g", "substitutes": ["Green Beans"]},
+        {"name": "100% Pure Organic Avocado Oil", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Sea Salt", "quantity": 0.25, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 6, "protein_g": 32, "fat_g": 12, "saturated_fat_g": 3, "fiber_g": 2, "calories": 280},
+      "health_impacts": ["high-protein", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Toss chicken and asparagus with oil and salt. Roast at 400°F for 20 min. Serve hot."
+    },
+    {
+      "id": "recipe_easy_028",
+      "name": "Smoothie with Protein Powder",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Blueberries", "quantity": 150, "unit": "g", "substitutes": ["Raspberries"]},
+        {"name": "Vanilla Protein Powder", "quantity": 1, "unit": "scoop", "substitutes": []},
+        {"name": "Unsweetened Almond Milk", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Chia Seeds", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 28, "protein_g": 25, "fat_g": 3.5, "saturated_fat_g": 0.4, "fiber_g": 4, "calories": 260},
+      "health_impacts": ["high-protein", "fiber-rich", "post-run-recovery"],
+      "training_context": "post-run-recovery",
+      "instructions": "Blend all ingredients until smooth. Drink immediately or refrigerate for later."
+    },
+    {
+      "id": "recipe_easy_029",
+      "name": "Rice Bowl with Black Lentils",
+      "difficulty": "Easy",
+      "prep_time_min": 20,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Thai Jasmine Rice", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Black Lentils", "quantity": 0.5, "unit": "cup", "substitutes": []},
+        {"name": "Red Onions", "quantity": 0.25, "unit": "count", "substitutes": []},
+        {"name": "Lime", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 64, "protein_g": 12, "fat_g": 1.2, "saturated_fat_g": 0.2, "fiber_g": 7, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "high-protein"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook rice and lentils separately. Combine in bowl. Top with diced onion and squeeze of fresh lime."
+    },
+    {
+      "id": "recipe_easy_030",
+      "name": "Cottage Cheese with Berries and Granola",
+      "difficulty": "Easy",
+      "prep_time_min": 5,
+      "servings": 1,
+      "ingredients": [
+        {"name": "Organic Greek Yogurt", "quantity": 150, "unit": "g", "substitutes": ["Cottage Cheese"]},
+        {"name": "Raspberries", "quantity": 100, "unit": "g", "substitutes": ["Blackberries"]},
+        {"name": "Granola", "quantity": 40, "unit": "g", "substitutes": []},
+        {"name": "Raw Honey", "quantity": 0.5, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 14, "fat_g": 5, "saturated_fat_g": 0.5, "fiber_g": 3, "calories": 280},
+      "health_impacts": ["high-protein", "fiber-rich", "gut-friendly"],
+      "training_context": "post-run-recovery",
+      "instructions": "Layer yogurt, berries, granola in bowl. Drizzle honey on top. Serve immediately."
+    },
+    {
+      "id": "recipe_medium_001",
+      "name": "Grilled Portobello Mushroom & Quinoa Salad",
+      "difficulty": "Medium",
+      "prep_time_min": 18,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Portobello Mushroom Caps", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Organic Quinoa", "quantity": 1, "unit": "cup", "substitutes": ["Brown Rice"]},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Walnuts", "quantity": 30, "unit": "g", "substitutes": ["Almonds"]},
+        {"name": "Balsamic Vinaigrette", "quantity": 3, "unit": "tbsp", "substitutes": ["Olive Oil + Vinegar"]}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 16, "fat_g": 14, "saturated_fat_g": 1.5, "fiber_g": 8, "calories": 410},
+      "health_impacts": ["hdl-elevating", "carb-efficient", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook quinoa. Grill portobellos 4 min per side. Chop and mix with cooled quinoa. Toss with spinach, walnuts, and vinaigrette."
+    },
+    {
+      "id": "recipe_medium_002",
+      "name": "Turkey Bolognese with Zucchini Noodles",
+      "difficulty": "Medium",
+      "prep_time_min": 22,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 300, "unit": "g", "substitutes": ["Ground Chicken"]},
+        {"name": "Zucchini", "quantity": 2, "unit": "medium", "substitutes": ["Squash"]},
+        {"name": "Organic Tuscan Marinara", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "100% Pure Organic Avocado Oil", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 18, "protein_g": 36, "fat_g": 12, "saturated_fat_g": 2, "fiber_g": 4, "calories": 360},
+      "health_impacts": ["high-protein", "low-carb", "vo2-support"],
+      "training_context": "easy-day",
+      "instructions": "Brown turkey in avocado oil. Add marinara and spinach. Spiralize zucchini into noodles, boil 3 min. Plate noodles, top with sauce."
+    },
+    {
+      "id": "recipe_medium_003",
+      "name": "Barley & Vegetable Power Stew",
+      "difficulty": "Medium",
+      "prep_time_min": 25,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Pearl Barley", "quantity": 1, "unit": "cup", "substitutes": ["Farro"]},
+        {"name": "Organic Black Lentils", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Celery", "quantity": 2, "unit": "stalks", "substitutes": []},
+        {"name": "Chicken Bone Broth", "quantity": 6, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 58, "protein_g": 14, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 10, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Boil broth, add barley, lentils, and diced vegetables. Simmer 25 min until all tender. Season well."
+    },
+    {
+      "id": "recipe_medium_004",
+      "name": "Herb-Crusted Chicken Paillard with Greens",
+      "difficulty": "Medium",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Breasts", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Fresh Rosemary & Thyme", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 3, "unit": "cups", "substitutes": ["Arugula"]},
+        {"name": "Carrots", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Avocado Lime Dressing", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 14, "protein_g": 42, "fat_g": 8, "saturated_fat_g": 1.2, "fiber_g": 4, "calories": 340},
+      "health_impacts": ["high-protein", "vo2-support", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Pound chicken flat. Season with herbs. Pan-sear 4 min per side. Serve over dressed greens and shredded carrots."
+    },
+    {
+      "id": "recipe_medium_005",
+      "name": "Beetroot & Black Bean Wrap",
+      "difficulty": "Medium",
+      "prep_time_min": 16,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Carb Balance Flour Tortillas", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Roasted Beetroots", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Organic Black Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Avocado Hass Variety", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 36, "protein_g": 14, "fat_g": 8, "saturated_fat_g": 1, "fiber_g": 9, "calories": 300},
+      "health_impacts": ["fiber-rich", "hdl-elevating", "vo2-support"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Warm tortillas. Layer beans, beetroot, spinach, avocado. Roll tightly. Serve with lime wedge."
+    },
+    {
+      "id": "recipe_medium_006",
+      "name": "Baked Cod with Tomato Relish",
+      "difficulty": "Medium",
+      "prep_time_min": 18,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Chicken Breast", "quantity": 200, "unit": "g", "substitutes": ["Turkey Breast"]},
+        {"name": "Cherry Tomatoes", "quantity": 250, "unit": "g", "substitutes": []},
+        {"name": "Red Onion", "quantity": 0.25, "unit": "count", "substitutes": []},
+        {"name": "Fresh Basil", "quantity": 0.25, "unit": "cup", "substitutes": []},
+        {"name": "Lime", "quantity": 0.5, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 12, "protein_g": 38, "fat_g": 3, "saturated_fat_g": 0.5, "fiber_g": 2, "calories": 240},
+      "health_impacts": ["high-protein", "vo2-support", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Bake chicken at 400°F for 15 min. Chop tomatoes, onion, basil for relish. Top chicken with relish and squeeze of lime."
+    },
+    {
+      "id": "recipe_medium_007",
+      "name": "Chickpea Curry with Brown Rice",
+      "difficulty": "Medium",
+      "prep_time_min": 24,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Chickpeas (Canned)", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Brown Rice", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Onions", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Turmeric Powder", "quantity": 1, "unit": "tsp", "substitutes": []},
+        {"name": "Coconut Milk (Lite)", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 58, "protein_g": 13, "fat_g": 5, "saturated_fat_g": 0.8, "fiber_g": 9, "calories": 380},
+      "health_impacts": ["carb-efficient", "fiber-rich", "anti-inflammatory"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook rice. Sauté onions, add turmeric and chickpeas. Simmer in coconut milk 15 min. Serve curry over rice."
+    },
+    {
+      "id": "recipe_medium_008",
+      "name": "Loaded Quinoa & Kale Salad",
+      "difficulty": "Medium",
+      "prep_time_min": 18,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Quinoa", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Kale", "quantity": 2, "unit": "cups", "substitutes": ["Spinach"]},
+        {"name": "Organic Chickpeas (Canned)", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Avocado Hass Variety", "quantity": 0.5, "unit": "count", "substitutes": []},
+        {"name": "Tahini Dressing", "quantity": 3, "unit": "tbsp", "substitutes": ["Olive Oil + Lemon"]}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 16, "fat_g": 12, "saturated_fat_g": 1.5, "fiber_g": 10, "calories": 420},
+      "health_impacts": ["high-protein", "fiber-rich", "hdl-elevating"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook quinoa, cool. Massage kale with olive oil. Combine with quinoa, chickpeas. Top with avocado, drizzle tahini dressing."
+    },
+    {
+      "id": "recipe_medium_009",
+      "name": "Sweet Potato & Black Bean Burrito Bowl",
+      "difficulty": "Medium",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Sweet Potatoes", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Black Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Red Peppers", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Lime Tahini Dressing", "quantity": 3, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 62, "protein_g": 14, "fat_g": 8, "saturated_fat_g": 1, "fiber_g": 11, "calories": 410},
+      "health_impacts": ["carb-efficient", "high-protein", "fiber-rich"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cube and bake sweet potatoes 20 min. Warm beans with spices. Assemble bowls with potatoes, beans, spinach, peppers. Drizzle dressing."
+    },
+    {
+      "id": "recipe_medium_010",
+      "name": "Lentil & Vegetable Pasta",
+      "difficulty": "Medium",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Red Lentil Pasta", "quantity": 200, "unit": "g", "substitutes": ["Whole Wheat Pasta"]},
+        {"name": "Organic Red Bell Peppers", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Carrots", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 18, "fat_g": 3, "saturated_fat_g": 0.4, "fiber_g": 8, "calories": 340},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook pasta. Dice peppers and carrots, sauté. Add marinara and spinach. Toss with cooked pasta. Serve hot."
+    },
+    {
+      "id": "recipe_medium_011",
+      "name": "Roasted Root Vegetable & Farro Bowl",
+      "difficulty": "Medium",
+      "prep_time_min": 25,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Farro", "quantity": 1, "unit": "cup", "substitutes": ["Barley"]},
+        {"name": "Organic Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Parsnips", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Brussels Sprouts", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Balsamic Vinaigrette", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 12, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 8, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook farro. Toss root vegetables with oil, roast 20 min. Combine farro and roasted veggies, drizzle vinaigrette."
+    },
+    {
+      "id": "recipe_medium_012",
+      "name": "Thai Basil Ground Turkey Lettuce Wraps",
+      "difficulty": "Medium",
+      "prep_time_min": 16,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 300, "unit": "g", "substitutes": ["Chicken"]},
+        {"name": "Butter Lettuce", "quantity": 1, "unit": "head", "substitutes": []},
+        {"name": "Red Bell Pepper", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Fresh Basil", "quantity": 0.25, "unit": "cup", "substitutes": []},
+        {"name": "Sriracha-Lime Sauce", "quantity": 2, "unit": "tbsp", "substitutes": ["Coconut Aminos + Lime"]}
+      ],
+      "nutrition": {"carbs_g": 8, "protein_g": 38, "fat_g": 6, "saturated_fat_g": 1.2, "fiber_g": 2, "calories": 260},
+      "health_impacts": ["high-protein", "low-carb", "vo2-support"],
+      "training_context": "easy-day",
+      "instructions": "Brown turkey, add diced pepper and basil. Toss with sriracha-lime sauce. Serve in lettuce cups with lime."
+    },
+    {
+      "id": "recipe_medium_013",
+      "name": "Creamy Mushroom & Barley Risotto",
+      "difficulty": "Medium",
+      "prep_time_min": 23,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Pearl Barley", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Mixed Mushrooms", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Vegetable Broth", "quantity": 4, "unit": "cups", "substitutes": []},
+        {"name": "Onion", "quantity": 0.5, "unit": "count", "substitutes": []},
+        {"name": "Garlic", "quantity": 2, "unit": "cloves", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 11, "fat_g": 4, "saturated_fat_g": 0.6, "fiber_g": 8, "calories": 340},
+      "health_impacts": ["carb-efficient", "anti-inflammatory", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Sauté onion and garlic, add mushrooms. Toast barley, gradually add broth while stirring. Cook 20 min until tender."
+    },
+    {
+      "id": "recipe_medium_014",
+      "name": "Beet & Walnut Salad with Goat Cheese",
+      "difficulty": "Medium",
+      "prep_time_min": 18,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Roasted Beetroots", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 3, "unit": "cups", "substitutes": []},
+        {"name": "Walnut Halves", "quantity": 40, "unit": "g", "substitutes": []},
+        {"name": "Goat Cheese", "quantity": 60, "unit": "g", "substitutes": []},
+        {"name": "Balsamic Vinaigrette", "quantity": 3, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 24, "protein_g": 12, "fat_g": 16, "saturated_fat_g": 4, "fiber_g": 5, "calories": 320},
+      "health_impacts": ["hdl-elevating", "anti-inflammatory", "antioxidant-rich"],
+      "training_context": "easy-day",
+      "instructions": "Cube roasted beets. Toss with spinach, walnuts. Crumble goat cheese on top. Drizzle with vinaigrette."
+    },
+    {
+      "id": "recipe_medium_015",
+      "name": "Slow-Cooker Turkey Chili",
+      "difficulty": "Medium",
+      "prep_time_min": 15,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 400, "unit": "g", "substitutes": []},
+        {"name": "Organic Black Beans", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Red Kidney Beans", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Diced Tomatoes", "quantity": 400, "unit": "g", "substitutes": []},
+        {"name": "Chili Powder", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 32, "fat_g": 4, "saturated_fat_g": 0.8, "fiber_g": 9, "calories": 380},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Brown turkey, add beans, tomatoes, spices. Transfer to slow cooker. Cook 6 hours on low. Serve hot."
+    },
+    {
+      "id": "recipe_medium_016",
+      "name": "Mediterranean Chickpea Salad",
+      "difficulty": "Medium",
+      "prep_time_min": 15,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Chickpeas (Canned)", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Cucumber", "quantity": 1, "unit": "large", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Cherry Tomatoes", "quantity": 250, "unit": "g", "substitutes": []},
+        {"name": "Avocado Lime Dressing", "quantity": 3, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 42, "protein_g": 13, "fat_g": 9, "saturated_fat_g": 1.2, "fiber_g": 9, "calories": 340},
+      "health_impacts": ["fiber-rich", "high-protein", "ldl-lowering"],
+      "training_context": "easy-day",
+      "instructions": "Chop all vegetables. Combine with drained chickpeas. Drizzle dressing. Toss and let sit 10 min before serving."
+    },
+    {
+      "id": "recipe_medium_017",
+      "name": "Beef Stir-Fry with Brown Rice",
+      "difficulty": "Medium",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "USDA Choice Beef Flank Steak", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Brown Rice", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Broccoli Florets", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Red Bell Pepper", "quantity": 1, "unit": "count", "substitutes": []},
+        {"name": "Coconut Aminos Seasoning Sauce", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 38, "fat_g": 8, "saturated_fat_g": 1.5, "fiber_g": 4, "calories": 460},
+      "health_impacts": ["high-protein", "carb-efficient", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook rice. Slice steak thin. Stir-fry beef 3 min, add vegetables 5 min. Toss with coconut aminos. Serve over rice."
+    },
+    {
+      "id": "recipe_medium_018",
+      "name": "Baked Turkey Meatloaf with Vegetables",
+      "difficulty": "Medium",
+      "prep_time_min": 30,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 500, "unit": "g", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Carrots", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Onion", "quantity": 0.5, "unit": "count", "substitutes": []},
+        {"name": "Whole Grain Bread Crumbs", "quantity": 0.5, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 16, "protein_g": 36, "fat_g": 8, "saturated_fat_g": 1.5, "fiber_g": 2, "calories": 320},
+      "health_impacts": ["high-protein", "carb-efficient", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Mix turkey, diced vegetables, spinach, bread crumbs. Form loaf. Bake at 375°F for 25 min. Cool 5 min before slicing."
+    },
+    {
+      "id": "recipe_medium_019",
+      "name": "Herbed Lentil & Sweet Potato Salad",
+      "difficulty": "Medium",
+      "prep_time_min": 22,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Black Lentils", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Sweet Potatoes", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Fresh Herbs (Thyme, Parsley)", "quantity": 2, "unit": "tbsp", "substitutes": []},
+        {"name": "Lemon Vinaigrette", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 13, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 10, "calories": 360},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook lentils and cubed sweet potato separately. Cool, combine with spinach and herbs. Toss with lemon vinaigrette."
+    },
+    {
+      "id": "recipe_medium_020",
+      "name": "Pesto Quinoa with Roasted Vegetables",
+      "difficulty": "Medium",
+      "prep_time_min": 24,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Quinoa", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Zucchini", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Organic Bell Peppers", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Fresh Basil", "quantity": 0.5, "unit": "cup", "substitutes": []},
+        {"name": "Pine Nuts", "quantity": 30, "unit": "g", "substitutes": ["Walnuts"]}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 14, "fat_g": 12, "saturated_fat_g": 1.5, "fiber_g": 7, "calories": 410},
+      "health_impacts": ["carb-efficient", "fiber-rich", "hdl-elevating"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook quinoa. Roast diced vegetables 20 min. Blend basil, pine nuts, olive oil for pesto. Toss all together."
+    },
+    {
+      "id": "recipe_medium_021",
+      "name": "Black Bean & Quinoa Stuffed Peppers",
+      "difficulty": "Medium",
+      "prep_time_min": 28,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Bell Peppers (Red/Yellow)", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Organic Quinoa", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Black Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Corn", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 56, "protein_g": 14, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 10, "calories": 380},
+      "health_impacts": ["carb-efficient", "fiber-rich", "high-protein"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook quinoa. Halve peppers, scoop seeds. Mix quinoa, beans, corn, spinach. Stuff peppers, bake at 375°F for 20 min."
+    },
+    {
+      "id": "recipe_medium_022",
+      "name": "Turmeric Chicken with Roasted Root Vegetables",
+      "difficulty": "Medium",
+      "prep_time_min": 25,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Breasts", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Turmeric Powder", "quantity": 1, "unit": "tsp", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Parsnips", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "100% Pure Organic Avocado Oil", "quantity": 1.5, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 26, "protein_g": 38, "fat_g": 10, "saturated_fat_g": 1.2, "fiber_g": 5, "calories": 380},
+      "health_impacts": ["high-protein", "vo2-support", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Season chicken with turmeric. Toss root vegetables with oil. Roast all at 400°F for 20 min. Serve together."
+    },
+    {
+      "id": "recipe_medium_023",
+      "name": "Spinach & Lentil Dal with Rice",
+      "difficulty": "Medium",
+      "prep_time_min": 23,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Organic Red Lentils", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Thai Jasmine Rice", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Onions", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Ginger & Turmeric", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 58, "protein_g": 12, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 8, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook rice. Sauté onions with spices, add lentils and water. Simmer 15 min, add spinach at end. Serve over rice."
+    },
+    {
+      "id": "recipe_medium_024",
+      "name": "Mixed Vegetable & Egg Fried Rice",
+      "difficulty": "Medium",
+      "prep_time_min": 18,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Brown Rice (Cooked)", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 3, "unit": "count", "substitutes": []},
+        {"name": "Broccoli Florets", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Carrots", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Coconut Aminos Seasoning Sauce", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 14, "fat_g": 10, "saturated_fat_g": 2, "fiber_g": 4, "calories": 390},
+      "health_impacts": ["carb-efficient", "high-protein", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Heat oil in wok. Scramble eggs, set aside. Stir-fry vegetables 3 min. Add rice, coconut aminos, return eggs. Toss 2 min."
+    },
+    {
+      "id": "recipe_medium_025",
+      "name": "White Bean & Kale Soup",
+      "difficulty": "Medium",
+      "prep_time_min": 24,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Organic White Beans", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Kale", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Celery", "quantity": 2, "unit": "stalks", "substitutes": []},
+        {"name": "Chicken Bone Broth", "quantity": 6, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 46, "protein_g": 13, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 10, "calories": 310},
+      "health_impacts": ["fiber-rich", "ldl-lowering", "gut-friendly"],
+      "training_context": "post-run-recovery",
+      "instructions": "Boil broth, add beans and diced vegetables. Simmer 15 min. Rough-chop kale, add at end. Cook 5 min more."
+    },
+    {
+      "id": "recipe_medium_026",
+      "name": "Grilled Portobello & Lentil Stack",
+      "difficulty": "Medium",
+      "prep_time_min": 20,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Portobello Mushroom Caps", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Organic Black Lentils", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Cherry Tomatoes", "quantity": 250, "unit": "g", "substitutes": []},
+        {"name": "Balsamic Glaze", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 44, "protein_g": 15, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 9, "calories": 340},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook lentils. Grill mushrooms 4 min per side. Layer: spinach, lentils, halved mushroom, tomatoes. Drizzle balsamic."
+    },
+    {
+      "id": "recipe_medium_027",
+      "name": "Baked Sweet Potato & Black Bean Tacos",
+      "difficulty": "Medium",
+      "prep_time_min": 22,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Sweet Potatoes", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Black Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Corn Tortillas", "quantity": 4, "unit": "count", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Lime Crema", "quantity": 2, "unit": "tbsp", "substitutes": ["Avocado"]}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 12, "fat_g": 5, "saturated_fat_g": 0.8, "fiber_g": 9, "calories": 340},
+      "health_impacts": ["carb-efficient", "fiber-rich", "high-protein"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Bake cubed sweet potatoes 20 min. Warm beans. Heat tortillas. Assemble with beans, potatoes, spinach, crema, lime."
+    },
+    {
+      "id": "recipe_medium_028",
+      "name": "Beet & Lentil Meatballs with Marinara",
+      "difficulty": "Medium",
+      "prep_time_min": 25,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Organic Black Lentils", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Roasted Beetroots", "quantity": 200, "unit": "g", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Whole Grain Bread Crumbs", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Pasture-Raised Large Eggs", "quantity": 1, "unit": "count", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 38, "protein_g": 14, "fat_g": 3, "saturated_fat_g": 0.4, "fiber_g": 8, "calories": 280},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook lentils, mix with grated beets, bread crumbs, egg. Form balls, bake 18 min. Heat marinara, toss with meatballs."
+    },
+    {
+      "id": "recipe_medium_029",
+      "name": "Thai Green Curry Chicken with Rice",
+      "difficulty": "Medium",
+      "prep_time_min": 23,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Boneless Skinless Chicken Breasts", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Thai Jasmine Rice", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Green Curry Paste", "quantity": 2, "unit": "tbsp", "substitutes": []},
+        {"name": "Bell Peppers (Green/Red)", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Coconut Milk (Lite)", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 36, "fat_g": 8, "saturated_fat_g": 1.5, "fiber_g": 3, "calories": 420},
+      "health_impacts": ["high-protein", "carb-efficient", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook rice. Dice chicken and peppers. Simmer curry paste in coconut milk 8 min. Add chicken, peppers, simmer 10 min. Serve over rice."
+    },
+    {
+      "id": "recipe_medium_030",
+      "name": "Roasted Carrot & Quinoa Power Bowl",
+      "difficulty": "Medium",
+      "prep_time_min": 24,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Organic Quinoa", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 4, "unit": "medium", "substitutes": []},
+        {"name": "Organic Chickpeas (Canned)", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Tahini Dressing", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 14, "fat_g": 10, "saturated_fat_g": 1.2, "fiber_g": 9, "calories": 410},
+      "health_impacts": ["carb-efficient", "fiber-rich", "hdl-elevating"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Cook quinoa. Cut carrots into batons, roast 20 min. Warm chickpeas. Assemble bowl with all components, drizzle tahini."
+    },
+    {
+      "id": "recipe_complex_001",
+      "name": "Baked Falafel with Tahini & Roasted Vegetables",
+      "difficulty": "Complex",
+      "prep_time_min": 35,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Chickpeas (Dried, Soaked)", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Fresh Parsley", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Zucchini", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Tahini Sauce", "quantity": 3, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 16, "fat_g": 12, "saturated_fat_g": 1.5, "fiber_g": 12, "calories": 430},
+      "health_impacts": ["fiber-rich", "hdl-elevating", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Pulse soaked chickpeas, parsley, spices. Form patties, bake 25 min. Roast vegetables alongside. Serve with tahini sauce."
+    },
+    {
+      "id": "recipe_complex_002",
+      "name": "Layered Lentil & Vegetable Casserole",
+      "difficulty": "Complex",
+      "prep_time_min": 40,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Organic Red Lentils", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Zucchini", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 4, "unit": "medium", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 2, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 18, "fat_g": 3, "saturated_fat_g": 0.4, "fiber_g": 12, "calories": 380},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook lentils. Layer: marinara, lentils, spinach, sliced zucchini, carrots. Repeat. Bake at 375°F for 30 min covered."
+    },
+    {
+      "id": "recipe_complex_003",
+      "name": "Slow-Cooker Turkey Meatball Marinara with Vegetables",
+      "difficulty": "Complex",
+      "prep_time_min": 20,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Ground Turkey", "quantity": 500, "unit": "g", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 2.5, "unit": "cups", "substitutes": []},
+        {"name": "Bell Peppers (Red/Yellow)", "quantity": 3, "unit": "count", "substitutes": []},
+        {"name": "Organic Mushrooms", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 24, "protein_g": 38, "fat_g": 6, "saturated_fat_g": 1.2, "fiber_g": 5, "calories": 380},
+      "health_impacts": ["high-protein", "vo2-support", "anti-inflammatory"],
+      "training_context": "post-run-recovery",
+      "instructions": "Form turkey meatballs. Brown 8 min. Transfer to slow cooker with marinara, peppers, mushrooms. Cook 6 hours on low. Add spinach last 30 min."
+    },
+    {
+      "id": "recipe_complex_004",
+      "name": "Vegetable & Lentil Soup with Homemade Stock",
+      "difficulty": "Complex",
+      "prep_time_min": 45,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Chicken Bone Broth (Homemade)", "quantity": 8, "unit": "cups", "substitutes": []},
+        {"name": "Organic Black Lentils", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 4, "unit": "medium", "substitutes": []},
+        {"name": "Celery", "quantity": 3, "unit": "stalks", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 44, "protein_g": 16, "fat_g": 2.5, "saturated_fat_g": 0.4, "fiber_g": 10, "calories": 320},
+      "health_impacts": ["high-protein", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Simmer broth with lentils 25 min. Add diced vegetables, cook 15 min. Stir in spinach. Simmer until all tender, season well."
+    },
+    {
+      "id": "recipe_complex_005",
+      "name": "Baked Eggplant Parmesan with Side Salad",
+      "difficulty": "Complex",
+      "prep_time_min": 38,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Eggplant", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 3, "unit": "cups", "substitutes": []},
+        {"name": "Fresh Herbs (Basil, Oregano)", "quantity": 2, "unit": "tbsp", "substitutes": []},
+        {"name": "Avocado Lime Dressing", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 28, "protein_g": 8, "fat_g": 8, "saturated_fat_g": 1, "fiber_g": 7, "calories": 260},
+      "health_impacts": ["fiber-rich", "ldl-lowering", "anti-inflammatory"],
+      "training_context": "easy-day",
+      "instructions": "Slice eggplant, salt 15 min. Bake at 400°F for 12 min. Layer with marinara, herbs. Bake 20 min. Serve with dressed spinach salad."
+    },
+    {
+      "id": "recipe_complex_006",
+      "name": "Spiced Chickpea & Vegetable Tagine",
+      "difficulty": "Complex",
+      "prep_time_min": 36,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Chickpeas (Canned)", "quantity": 2.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 4, "unit": "medium", "substitutes": []},
+        {"name": "Zucchini", "quantity": 1, "unit": "medium", "substitutes": []},
+        {"name": "Organic Tomato Paste", "quantity": 2, "unit": "tbsp", "substitutes": []},
+        {"name": "Cumin & Cinnamon", "quantity": 1, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 58, "protein_g": 14, "fat_g": 4, "saturated_fat_g": 0.5, "fiber_g": 12, "calories": 380},
+      "health_impacts": ["fiber-rich", "carb-efficient", "anti-inflammatory"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Sauté onion, add spices, tomato paste. Add broth, chickpeas, vegetables. Simmer 25 min until all tender. Serve hot."
+    },
+    {
+      "id": "recipe_complex_007",
+      "name": "Baked Whole Grain Pasta Primavera",
+      "difficulty": "Complex",
+      "prep_time_min": 32,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Whole Wheat Pasta", "quantity": 250, "unit": "g", "substitutes": ["Chickpea Pasta"]},
+        {"name": "Organic Broccoli Florets", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Bell Peppers", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Organic Tuscan Marinara", "quantity": 2, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 14, "fat_g": 3.5, "saturated_fat_g": 0.4, "fiber_g": 9, "calories": 360},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook pasta. Toss roasted vegetables with marinara. Combine with pasta. Bake at 375°F for 15 min. Serve hot."
+    },
+    {
+      "id": "recipe_complex_008",
+      "name": "Herb-Braised Beef with Root Vegetables",
+      "difficulty": "Complex",
+      "prep_time_min": 40,
+      "servings": 4,
+      "ingredients": [
+        {"name": "USDA Choice Beef Chuck Roast", "quantity": 600, "unit": "g", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 4, "unit": "medium", "substitutes": []},
+        {"name": "Celery", "quantity": 3, "unit": "stalks", "substitutes": []},
+        {"name": "Fresh Herbs (Thyme, Bay)", "quantity": 1, "unit": "tbsp", "substitutes": []},
+        {"name": "Beef Broth", "quantity": 3, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 20, "protein_g": 44, "fat_g": 12, "saturated_fat_g": 4, "fiber_g": 4, "calories": 400},
+      "health_impacts": ["high-protein", "vo2-support"],
+      "training_context": "post-run-recovery",
+      "instructions": "Brown beef. Add broth, vegetables, herbs. Braise at 325°F for 2.5 hours. Meat should be very tender. Serve with vegetables and broth."
+    },
+    {
+      "id": "recipe_complex_009",
+      "name": "Vegetable Biryani with Basmati Rice",
+      "difficulty": "Complex",
+      "prep_time_min": 42,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Organic Basmati Rice", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Potatoes", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Onions", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Ginger-Garlic Paste", "quantity": 2, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 68, "protein_g": 8, "fat_g": 3, "saturated_fat_g": 0.4, "fiber_g": 6, "calories": 360},
+      "health_impacts": ["carb-efficient", "fiber-rich"],
+      "training_context": "pre-run-fuel",
+      "instructions": "Layer parboiled rice, fried onions, spiced vegetables. Cover, cook on low heat 25 min. Fluff and serve."
+    },
+    {
+      "id": "recipe_complex_010",
+      "name": "Multi-Bean Chili with Toppings",
+      "difficulty": "Complex",
+      "prep_time_min": 38,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Organic Black Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Red Kidney Beans", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Diced Tomatoes", "quantity": 800, "unit": "g", "substitutes": []},
+        {"name": "Onions", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Chili Powder & Cumin", "quantity": 2, "unit": "tsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 16, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 12, "calories": 340},
+      "health_impacts": ["fiber-rich", "high-protein", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Sauté onions, add spices. Add beans and tomatoes. Simmer 30 min. Serve with avocado, spinach, lime toppings."
+    },
+    {
+      "id": "recipe_complex_011",
+      "name": "Homemade Vegetable Broth & Quinoa Soup",
+      "difficulty": "Complex",
+      "prep_time_min": 50,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Carrot & Celery Scraps (for broth)", "quantity": 3, "unit": "cups", "substitutes": []},
+        {"name": "Organic Quinoa", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Mushrooms", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Fresh Herbs", "quantity": 1, "unit": "tbsp", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 48, "protein_g": 12, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 8, "calories": 300},
+      "health_impacts": ["carb-efficient", "fiber-rich", "gut-friendly"],
+      "training_context": "post-run-recovery",
+      "instructions": "Simmer vegetable scraps 30 min for broth. Strain, use to cook quinoa. Add mushrooms, spinach, herbs. Simmer 15 min."
+    },
+    {
+      "id": "recipe_complex_012",
+      "name": "Stuffed Acorn Squash with Wild Rice & Lentils",
+      "difficulty": "Complex",
+      "prep_time_min": 42,
+      "servings": 2,
+      "ingredients": [
+        {"name": "Acorn Squash", "quantity": 2, "unit": "count", "substitutes": []},
+        {"name": "Wild Rice", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Black Lentils", "quantity": 0.75, "unit": "cup", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Walnuts", "quantity": 40, "unit": "g", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 64, "protein_g": 14, "fat_g": 10, "saturated_fat_g": 1, "fiber_g": 11, "calories": 450},
+      "health_impacts": ["carb-efficient", "fiber-rich", "hdl-elevating"],
+      "training_context": "post-run-recovery",
+      "instructions": "Halve squash, scoop seeds, roast 25 min. Cook wild rice and lentils. Mix with spinach, walnuts. Stuff squash, bake 10 min more."
+    },
+    {
+      "id": "recipe_complex_013",
+      "name": "Three-Bean & Vegetable Minestrone",
+      "difficulty": "Complex",
+      "prep_time_min": 40,
+      "servings": 4,
+      "ingredients": [
+        {"name": "Organic Black Beans", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Chickpeas (Canned)", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic White Beans", "quantity": 1, "unit": "cup", "substitutes": []},
+        {"name": "Organic Diced Tomatoes", "quantity": 400, "unit": "g", "substitutes": []},
+        {"name": "Vegetable Broth", "quantity": 6, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 54, "protein_g": 14, "fat_g": 2, "saturated_fat_g": 0.3, "fiber_g": 12, "calories": 340},
+      "health_impacts": ["fiber-rich", "high-protein", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Sauté onion and garlic. Add broth, beans, tomatoes, diced vegetables. Simmer 30 min. Add spinach at end. Season and serve."
+    },
+    {
+      "id": "recipe_complex_014",
+      "name": "Roasted Root Vegetable & Farro Risotto",
+      "difficulty": "Complex",
+      "prep_time_min": 36,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Farro", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Carrots", "quantity": 3, "unit": "medium", "substitutes": []},
+        {"name": "Parsnips", "quantity": 2, "unit": "medium", "substitutes": []},
+        {"name": "Brussels Sprouts", "quantity": 250, "unit": "g", "substitutes": []},
+        {"name": "Vegetable Broth", "quantity": 5, "unit": "cups", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 58, "protein_g": 12, "fat_g": 3, "saturated_fat_g": 0.4, "fiber_g": 10, "calories": 360},
+      "health_impacts": ["carb-efficient", "fiber-rich", "ldl-lowering"],
+      "training_context": "post-run-recovery",
+      "instructions": "Roast vegetables 20 min. Toast farro, gradually add warm broth. Stir constantly 20 min. Fold in roasted vegetables."
+    },
+    {
+      "id": "recipe_complex_015",
+      "name": "Lentil & Mushroom Wellington with Greens",
+      "difficulty": "Complex",
+      "prep_time_min": 45,
+      "servings": 3,
+      "ingredients": [
+        {"name": "Organic Black Lentils", "quantity": 1.5, "unit": "cups", "substitutes": []},
+        {"name": "Organic Mushrooms (Mixed)", "quantity": 400, "unit": "g", "substitutes": []},
+        {"name": "Whole Wheat Puff Pastry", "quantity": 300, "unit": "g", "substitutes": []},
+        {"name": "Organic Spinach", "quantity": 2, "unit": "cups", "substitutes": []},
+        {"name": "Walnuts", "quantity": 60, "unit": "g", "substitutes": []}
+      ],
+      "nutrition": {"carbs_g": 52, "protein_g": 16, "fat_g": 14, "saturated_fat_g": 2, "fiber_g": 10, "calories": 440},
+      "health_impacts": ["high-protein", "fiber-rich", "hdl-elevating"],
+      "training_context": "post-run-recovery",
+      "instructions": "Cook lentils. Sauté finely chopped mushrooms until dry. Mix with lentils, walnuts, spinach. Wrap in pastry. Bake 25 min at 400°F until golden."
+    }
+  ]
+}
